@@ -1,6 +1,7 @@
 ---
 layout: page
 ---
+[![Waffle.io - Issues in progress](https://badge.waffle.io/Autumn-Martin/little-shop-redux.png?label=in%20progress&title=In%20Progress)](http://waffle.io/Autumn-Martin/little-shop-redux)
 
 # Little Shop Redux
 
