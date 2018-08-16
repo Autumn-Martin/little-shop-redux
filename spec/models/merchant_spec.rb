@@ -1,12 +1,7 @@
-RSpec.describe Merchant do
+RSpec.describe Merchant, type: :model do
   describe 'Validations' do
-    it 'is invalid without a name' do
-      merchant_1 = Merchant.new(name: nil)
-      expect(merchant_1).to_not be_valid
 
-      merchant_2 = Merchant.create(name: "Whatever")
-      expect(merchant_2).to be_valid
-    end
+    it { should validate_presence_of(:name)}
     # it 'has an id' do
     #   merchant_1 = Merchant.new(name: "Bob Ross")
     #   expect(merchant_1.id).not_to eq(nil)
