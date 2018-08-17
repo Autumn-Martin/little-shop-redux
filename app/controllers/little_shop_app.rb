@@ -42,4 +42,9 @@ class LittleShopApp < Sinatra::Base
     @merchants = Merchant.all
     erb :"items/new"
   end
+
+  post '/items' do
+    Item.create(params[:item])
+    redirect '/items'
+  end
 end
