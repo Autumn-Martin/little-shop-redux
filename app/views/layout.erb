@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
     <title>Little Shop</title>
     <meta charset="UTF-8" />
   </head>
 
   <body>
-    <nav>
+    <header>
+      <h1>Little Shop</h1>
+      <nav>
+        <ul>
+          <li>Merchants</li>
+          <li>Items</li>
+          <li>Invoices</li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <nav>
       <h1><a>Little Shop</a></h1>
       <h2><a>Merchants</a></h2>
       <h2><a>Items</a></h2>
       <h2><a>Invoices</a></h2>
-    </nav>
+    </nav> -->
 
     <%= yield %>
 
