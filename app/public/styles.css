@@ -1,0 +1,35 @@
+header {
+  background: #FAF0E6;
+  color: black;
+  height: 50px;
+  padding: 0 25px;
+}
+
+header nav {
+  float: right;
+}
+
+header h1 {
+  float: left;
+  /* text-indent: -9999px;
+  background: url('../images/dog-icon.svg') no-repeat; */
+  height: 35px;
+  width: 150px;
+  margin-top: 18px;
+}
+
+nav li {
+  display: inline-block;
+  padding: 17px 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black
+}
+
+nav li:hover {
+  background: #696969;
+  color: white;
+  cursor: pointer;
+}
