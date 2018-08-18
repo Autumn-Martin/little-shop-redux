@@ -1,0 +1,19 @@
+<div class="index">
+  <a href="/items-dashboard" class="dashboard-link">Dashboard</a>
+  <br/>
+  <h1 class="index-title">Items</h1>
+  <a href="/items/new">Create A New Item</a>
+  <br/>
+  <% @items.each do |item| %>
+    <div id="item-<%= item.id %>" class="item">
+      <a href="/items/<%= item.id %>"> <%= item.name %> </a>
+      <a href="/items/<%= item.id %>/edit">Edit</a>
+
+      <form action="/items/<%= item.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" class="btn btn-dark" value="delete"/>
+      </form>
+
+    </div>
+  <% end %>
+</div>
