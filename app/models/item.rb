@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  belongs_to :items
+  belongs_to :merchants
 
   validates_presence_of :title
   validates_presence_of :description
