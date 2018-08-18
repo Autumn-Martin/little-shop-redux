@@ -7,8 +7,8 @@ RSpec.describe 'Invoice Index Page' do
   end
 
   context 'as a visitor to /invoices' do
-    visit '/invoices'
     it 'shows list of invoices' do
+      visit '/invoices'
       expect(page).to have_content("#{@invoice_1.merchant_id}")
       expect(page).to have_content("#{@invoice_2.merchant_id}")
     end
