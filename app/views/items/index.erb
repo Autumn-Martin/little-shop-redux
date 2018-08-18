@@ -1,19 +1,15 @@
-<div class="index">
-  <a href="/items-dashboard" class="dashboard-link">Dashboard</a>
-  <br/>
-  <h1 class="index-title">Items</h1>
-  <a href="/items/new">Create A New Item</a>
-  <br/>
-  <% @items.each do |item| %>
-    <div id="item-<%= item.id %>" class="item">
-      <a href="/items/<%= item.id %>"> <%= item.title %> </a>
-      <a href="/items/<%= item.id %>/edit">Edit</a>
+<p><a href="/items/dashboard">Dashboard</a></p>
+<h1>Items</h1>
 
-      <form action="/items/<%= item.id %>" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" class="btn btn-dark" value="delete"/>
-      </form>
+<form method="get" action="items/new">
+  <button type="submit">Create A New Item</button>
+</form>
 
-    </div>
-  <% end %>
-</div>
+<% @items.each do |item| %>
+  <ul>
+    <li><img src="item.png" alt="image placeholder"/>
+    <li><a href="/items/<%=item.id%>"><%=item.title.truncate_words(3)%></a></li></br>
+    <li>$ <%='%.2f' % item.price%></li></br>
+  </ul>
+<% end %>
+
