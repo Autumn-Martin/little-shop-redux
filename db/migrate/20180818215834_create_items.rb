@@ -6,5 +6,6 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.float   :unit_price
       t.text    :image
       t.timestamps null: false
+    end
   end
 end
