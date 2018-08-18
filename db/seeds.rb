@@ -18,7 +18,7 @@ CSV.foreach('./data/items.csv', headers: true, header_converters: :symbol) do |i
               id:           item[:id],
               title:        item[:name],
               description:  item[:description],
-              price:        item[:unit_price],
+              unit_price:   item[:unit_price],
               merchant_id:  item[:merchant_id],
               image:        'https://europe.yamaha.com/en/files/20151124_Yamana33113_1200x480_26c503bef079d401ade3441dbd6605ff.jpg',
               created_at:   item[:created_at],
