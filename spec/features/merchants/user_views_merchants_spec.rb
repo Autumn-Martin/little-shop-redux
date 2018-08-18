@@ -10,7 +10,5 @@ RSpec.describe 'Merchant index page' do
       expect(page).to have_content(@merchant_1.name)
       expect(page).to have_content(@merchant_2.name)
     end
-
-
   end
 end
