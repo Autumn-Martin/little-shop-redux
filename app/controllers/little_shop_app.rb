@@ -33,8 +33,53 @@ class LittleShopApp < Sinatra::Base
     redirect '/merchants'
   end
 
+  get '/items' do
+    @items = Item.all
+    erb :"items/index"
+  end
+
+  get '/items/new' do
+    @merchants = Merchant.all
+    erb :"items/new"
+  end
+
+  post '/items' do
+    Item.create(params[:item])
+    redirect '/items'
+  end
+
+  get '/items/:id' do
+    @item = Item.find(params[:id])
+    erb :'items/show'
+  end
+
+  get '/items/:id/edit' do
+    @merchants = Merchant.all
+    @item = Item.find(params[:id])
+    erb :'items/edit'
+  end
+
+  put '/items/:id' do
+    Item.update(params[:id], params[:item])
+    redirect "/items/#{params[:id]}"
+  end
+
+  delete '/items/:id' do
+    Item.destroy(params[:id])
+    redirect '/items'
+  end
+
+  get '/items/dashboard' do
+    @items = Item.all
+    @average_unit_price = Item.average_unit_price
+    @total_item_count = Item.total_item_count
+    @newest = Item.newest
+    @oldest = Item.oldest
+    erb :'items/dashboard'
+
   get '/invoices' do
     @invoices = Invoice.all
     erb :"invoices/index"
+
   end
 end
