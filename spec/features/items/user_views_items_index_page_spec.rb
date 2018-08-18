@@ -13,19 +13,26 @@ RSpec.describe 'Item index page' do
       expect(page).to have_content(@item_2.title)
     end
     it 'shows Dashboard link' do
-
+      visit '/items'
+      expect(page).to have_content("Dashboard")
     end
     it 'shows create a new item button' do
-
+      visit '/items'
+      expect(page).to have_content("Create A New Item")
     end
-    it "shows picture of item" do
-
+    it "shows pictures of item" do
+      visit '/items'
+      expect(page).to have_content(@item_1.image)
+      expect(page).to have_content(@item_2.image)
     end
     it "shows price of item" do
-
+      visit '/items'
+      expect(page).to have_content(@item_1.price)
+      expect(page).to have_content(@item_2.price)
     end
     it "shows link to individual item" do
-
+      visit '/items'
+      expect(page).to have_content(@item_2)
     end
   end
 end
