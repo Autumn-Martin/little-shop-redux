@@ -14,7 +14,7 @@ RSpec.describe 'Merchant create page' do
       click_on 'Create Merchant'
 
       expect(current_path).to eq('/merchants')
-      save_and_open_page
+
       expect(page).to have_content(merchant.name)
     end
   end

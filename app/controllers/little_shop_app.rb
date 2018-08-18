@@ -76,5 +76,10 @@ class LittleShopApp < Sinatra::Base
     @newest = Item.newest
     @oldest = Item.oldest
     erb :'items/dashboard'
+
+  get '/invoices' do
+    @invoices = Invoice.all
+    erb :"invoices/index"
+
   end
 end
