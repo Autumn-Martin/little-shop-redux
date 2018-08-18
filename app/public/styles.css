@@ -46,3 +46,19 @@ nav li:hover {
 .index-title {
   font-size: 36px;
 }
+
+/* .col-1 {
+  padding-right:2px;
+} */
+#m {
+  background: green;
+
+}
+
+.view-title-bar {
+  background: lightgrey;
+  text-align: center;
+}
+.view-title-bar a {
+  float: left;
+}

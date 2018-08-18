@@ -1,25 +1,25 @@
-<div class="index">
-  <a href="/merchants-dashboard" class="dashboard-link">Dashboard</a>
-  <br/>
-  <h1 class="index-title">Merchants</h1>
-  <a href="/merchants/new">Create A New Merchant</a>
-  <br/>
+<section class="index">
+  <section class="view-title-bar" display: flex>
+    <a href="/merchants-dashboard" class="dashboard-link">Dashboard</a>
+    <h1 class="index-title">Merchants</h1>
+    <a href="/merchants/new" class="btn btn-info">Create A New Merchant</a>
+  </section>
   <% @merchants.each do |merchant| %>
     <div id="merchant-<%= merchant.id %>" class="merchant" class="container">
       <div class="row">
-        <div class="col-7">
+        <div class="col">
           <a href="/merchants/<%= merchant.id %>"> <%= merchant.name %> </a>
         </div>
-        <div class="col-1">
-          <a href="/merchants/<%= merchant.id %>/edit">Edit</a>
+        <div class="col-1" >
+          <a href="/merchants/<%= merchant.id %>/edit" class="btn btn-dark">Edit</a>
         </div>
         <div class="col-1">
           <form action="/merchants/<%= merchant.id %>" method="POST">
             <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" class="btn btn-dark" value="delete"/>
+            <input type="submit" value="delete" class="btn btn-dark"/>
           </form>
         </div>
       </div>
     </div>
   <% end %>
-</div>
+</section>
