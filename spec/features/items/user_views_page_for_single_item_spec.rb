@@ -7,6 +7,7 @@ RSpec.describe 'Single Item Page' do
   end
   context 'as a visitor' do
     it 'shows an individual item' do
+      #####stopped here ############
       visit '/items/12345'  #stopped here
 
       expect(page).to have_content(@item_1.title)
