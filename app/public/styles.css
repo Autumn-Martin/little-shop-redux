@@ -33,3 +33,16 @@ nav li:hover {
   color: white;
   cursor: pointer;
 }
+
+/* Styling for Index Pages */
+
+.index {
+  margin: 5% 5%;
+}
+
+.dashboard-link {
+}
+
+.index-title {
+  font-size: 36px;
+}
