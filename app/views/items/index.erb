@@ -1,0 +1,14 @@
+<p><a href="/items/dashboard">Dashboard</a></p>
+<h1>Items</h1>
+
+<form method="get" action="items/new">
+  <button type="submit">Create A New Item</button>
+</form>
+
+<% @items.each do |item| %>
+  <ul>
+    <li><img src="item.png" alt="image placeholder"/>
+    <li><a href="/items/<%=item.id%>"><%=item.title.truncate_words(3)%></a></li></br>
+    <li>$ <%='%.2f' % item.price%></li></br>
+  </ul>
+<% end %>
