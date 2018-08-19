@@ -13,7 +13,13 @@ class Merchant < ActiveRecord::Base
   end
 
   def total_price_all_items
-    items.sum(:unit_price) 
+    items.sum(:unit_price)
+  end
+
+  def self.most_items
+    all.max_by do |merchant|
+      merchant.total_merchant_items
+    end
   end
 
 
