@@ -37,21 +37,14 @@ nav li:hover {
 /* Styling for Index Pages */
 
 .index {
-  margin: 5% 5%;
+
 }
 
 .dashboard-link {
+  float: left;
+
 }
 
 .index-title {
   font-size: 36px;
 }
-
-
-/* .title-bar {
-  background: lightgrey;
-  text-align: center;
-}
-.title-bar a {
-  float: left;
-} */
