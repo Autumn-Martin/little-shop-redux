@@ -1,4 +1,4 @@
-<section class="new-page">
+<!-- <section class="new-page">
   <section class="jumbotron text-center" style="margin-bottom:5%">
     <h1 class="new-title" style="margin:5%">Create New Merchant:</h1>
   </section>
@@ -18,4 +18,17 @@
       </div>
     </div>
 </div>
+</section> -->
+<section class="new-page">
+  <section class="jumbotron text-center" style="margin-bottom:5%">
+    <h1 class="new-title" style="margin:5%">Create New Merchant:</h1>
+  </section>
+    <form action="/merchants" method="post">
+      <label>Name</label>
+      <input type='text' name='merchant[name]' placeholder="Henry's Cafe"/><br>
+      <button type='submit' class='btn btn-info'>Create Merchant</button>
+    </form>
+    <form action="/merchants">
+      <button type='submit' id="delete-btn" class="btn">Cancel</button>
+    </form>
 </section>
