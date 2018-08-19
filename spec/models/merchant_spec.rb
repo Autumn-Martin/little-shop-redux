@@ -28,4 +28,50 @@ RSpec.describe Merchant, type: :model do
       expect(association.macro).to eq :has_many
     end
   end
+  describe 'instance methods' do
+    it ".total_merchant_items" do
+      merchant_1 = Merchant.create(name: "sax-o-phones")
+      merchant_2 = Merchant.create(name: "more saxophones")
+
+      item_1 = Item.create(
+        title: 'rovner ligature',
+        description: 'a fancy leather strap ligature',
+        unit_price: 40,
+        image: 'image url',
+        merchant_id: merchant_1.id)
+      item_2 = Item.create(
+        title: 'c* mouthpiece',
+        description: 'a mouthpiece for soft sounds',
+        unit_price: 100,
+        image: 'image url',
+        merchant_id: merchant_2.id)
+      item_3= Item.create(
+        title: 'risers',
+        description: 'left hand palm key risers',
+        unit_price: 20,
+        image: 'image url',
+        merchant_id: merchant_1.id)
+      expect(merchant_1.total_merchant_items).to eq(2)
+      expect(merchant_2.total_merchant_items).to eq(1)
+    end
+    it ".average_item_price" do
+      merchant_1 = Merchant.create(name: "sax-o-phones")
+
+      item_1 = Item.create(
+        title: 'rovner ligature',
+        description: 'a fancy leather strap ligature',
+        unit_price: 40,
+        image: 'image url',
+        merchant_id: merchant_1.id)
+
+      item_3= Item.create(
+        title: 'risers',
+        description: 'left hand palm key risers',
+        unit_price: 20,
+        image: 'image url',
+        merchant_id: merchant_1.id)
+
+      expect(merchant_1.average_item_price).to eq(30)
+    end 
+  end
 end
