@@ -8,10 +8,10 @@
     <div id="merchant-<%= merchant.id %>" class="merchant" class="container">
       <div class="row">
         <div class="col">
-          <a href="/merchants/<%= merchant.id %>"> <%= merchant.name %> </a>
+          <a href="/merchants/<%= merchant.id %>" class="badge badge-warning" id="merchant-link"> <%= merchant.name %> </a>
         </div>
         <div class="col-1" >
-          <a href="/merchants/<%= merchant.id %>/edit" class="btn btn-info btn-shadow" >Edit</a>
+          <a href="/merchants/<%= merchant.id %>/edit" class="btn btn-info">Edit</a>
         </div>
         <div class="col-1">
           <form action="/merchants/<%= merchant.id %>" method="POST">

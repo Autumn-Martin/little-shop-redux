@@ -5,6 +5,7 @@ header {
   color: #c9e4ca;
   height: 50px;
   padding: 0 25px;
+  /* border-radius:0;  */
 }
 
 header nav {
@@ -61,9 +62,13 @@ nav li:hover {
   background:#3b6064;
   color: white;
 }
-#merchant {
-  padding: 5% 5%;
+#delete-btn:hover {
+  background: #364958;
 }
+/* #merchant {
+  padding: 0% 0%;
+  margin: 0% 0%;
+} */
 .jumbotron {
   background: #3b6064;
   color: #c9e4ca;
@@ -75,8 +80,18 @@ nav li:hover {
   /* border-radius:0; */
 }
 .col {
-  margin-left: 5%;
+  margin-left: 2%;
+}
+.row {
+  margin-right: 2%;
+
 }
 /* .btn.shadow  {
   box-shadow: 10px 5px 5px teal;
 } */
+
+#merchant-link {
+  background: lightgrey;
+  padding: 14px 24px;
+  font-size: 20px;
+}
