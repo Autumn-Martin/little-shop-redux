@@ -1,4 +1,5 @@
 header {
+  /* background: #FAF0E6; */
   background: #FAF0E6;
   color: black;
   height: 50px;
@@ -37,6 +38,7 @@ nav li:hover {
 /* Styling for Index Pages */
 
 .index {
+  background: #fefffe;
 
 }
 
@@ -47,4 +49,12 @@ nav li:hover {
 
 .index-title {
   font-size: 36px;
+  color:#364958;
+}
+
+#edit-btn {
+  background: white;
+}
+#delete-btn {
+  background:
 }
