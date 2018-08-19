@@ -46,7 +46,8 @@ nav li:hover {
 
 .dashboard-link {
   float: left;
-
+  color: #c9e4ca;
+  text-decoration: underline;
 }
 
 .index-title {
@@ -84,14 +85,21 @@ nav li:hover {
 }
 .row {
   margin-right: 2%;
-
+  /* border-left: 2%; */
+  outline-style: dotted;
+  outline-color: #c9e4ca;
+  /* background: lightgrey; */
 }
 /* .btn.shadow  {
   box-shadow: 10px 5px 5px teal;
 } */
 
 #merchant-link {
-  background: lightgrey;
+  background:  #c9e4ca;
+  color: #364958;
   padding: 14px 24px;
   font-size: 20px;
+}
+#merchant-link:hover {
+  background: #87bba2;
 }
