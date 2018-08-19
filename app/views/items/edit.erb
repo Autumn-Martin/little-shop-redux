@@ -1,12 +1,11 @@
 <p>Edit <%= @item.title %>:</p>
-
 <form class='edit-item' action='/items/<%= @item.id %>' method='POST'>
-  <p>Merchant</br>
-   <!-- need to make a drop down menu here -->
+  <label for="merchant-select">Merchant</label>
+  <select class="form-control" id="merchant-select">
     <%@merchants.each do |merchant|%>
     <option value="<%=merchant.id%>"><%=merchant.name%></option>
     <%end%>
-  </p></br>
+  </select></br>
   <p>Title</br>
   <input type='hidden' name='_method' value='PUT'>
   <textarea name='item[title]'><%= @item.title %></textarea></p></br>
