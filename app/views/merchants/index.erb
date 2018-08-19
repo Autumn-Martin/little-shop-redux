@@ -1,19 +1,26 @@
-<div class="index">
-  <a href="/merchants-dashboard" class="dashboard-link">Dashboard</a>
-  <br/>
-  <h1 class="index-title">Merchants</h1>
-  <a href="/merchants/new">Create A New Merchant</a>
-  <br/>
+<section class="index">
+  <section class="jumbotron text-center" style="margin-bottom:5%">
+    <a href="/merchants-dashboard" class="dashboard-link">Dashboard</a>
+    <h1 class="index-title"style="margin:5%">Merchants</h1>
+    <a href="/merchants/new" class="btn btn-info">Create A New Merchant</a>
+  </section>
   <% @merchants.each do |merchant| %>
-    <div id="merchant-<%= merchant.id %>" class="merchant">
-      <a href="/merchants/<%= merchant.id %>"> <%= merchant.name %> </a>
-      <a href="/merchants/<%= merchant.id %>/edit">Edit</a>
-
-      <form action="/merchants/<%= merchant.id %>" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" class="btn btn-dark" value="delete"/>
-      </form>
-
+    <div id="merchant-<%= merchant.id %>" class="container">
+      <div class="row">
+        <div class="col">
+          <a href="/merchants/<%= merchant.id %>" class="badge badge-warning" id="merchant-link"> <%= merchant.name %> </a>
+        </div>
+        <div class="col-1" >
+          <a href="/merchants/<%= merchant.id %>/edit" class="btn btn-info">Edit</a>
+        </div>
+        <div class="col-1">
+          <form action="/merchants/<%= merchant.id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>
+          </form>
+        </div>
+      </div>
     </div>
+    <br />
   <% end %>
-</div>
+</section>
