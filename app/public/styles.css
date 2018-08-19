@@ -1,7 +1,8 @@
 header {
   /* background: #FAF0E6; */
-  background: #FAF0E6;
-  color: black;
+  background: #364958;
+  /* background: #55828b; */
+  color: #c9e4ca;
   height: 50px;
   padding: 0 25px;
 }
@@ -26,11 +27,11 @@ nav li {
 
 nav li a {
   text-decoration: none;
-  color: black
+  color: #c9e4ca;
 }
 
 nav li:hover {
-  background: #696969;
+  background: #3b6064;
   color: white;
   cursor: pointer;
 }
@@ -49,12 +50,21 @@ nav li:hover {
 
 .index-title {
   font-size: 36px;
-  color:#364958;
+  color:#c9e4ca;
 }
 
-#edit-btn {
-  background: white;
-}
+/* #edit-btn {
+  background: #c9e4ca;
+} */
 #delete-btn {
-  background:
+  /* background: #982649; */
+  background:#3b6064;
+  color: white;
+}
+#merchant {
+  padding: 5% 5%;
+}
+.jumbotron {
+  background: #3b6064;
+  color: #c9e4ca;
 }
