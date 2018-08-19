@@ -72,7 +72,6 @@ nav li:hover {
 }
 .btn {
   padding: 14px 24px;
-  letter-spacing: 1px;
 }
 .col {
   margin-left: 2%;
@@ -91,4 +90,16 @@ nav li:hover {
 }
 #merchant-link:hover {
   background: #87bba2;
+}
+
+/* Styling for new pages */
+.new-title {
+  font-size: 36px;
+  color:#c9e4ca;
+}
+.new-page {
+  /* background: purple; */
+  text-align: center;
+  /* display: inline-block; */
+
 }
