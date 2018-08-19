@@ -5,7 +5,7 @@
     <a href="/merchants/new" class="btn btn-info">Create A New Merchant</a>
   </section>
   <% @merchants.each do |merchant| %>
-    <div id="merchant-<%= merchant.id %>" class="merchant" class="container">
+    <div id="merchant-<%= merchant.id %>" class="container">
       <div class="row">
         <div class="col">
           <a href="/merchants/<%= merchant.id %>" class="badge badge-warning" id="merchant-link"> <%= merchant.name %> </a>
