@@ -117,9 +117,32 @@ RSpec.describe Merchant, type: :model do
           merchant_id: merchant_1.id)
 
         expect(Merchant.most_items).to eq(merchant_1)
+      end
+      it ".highest_priced_item" do
+        merchant_1 = Merchant.create(name: "sax-o-phones")
+        merchant_2 = Merchant.create(name: "more saxophones")
 
+        item_1 = Item.create(
+          title: 'rovner ligature',
+          description: 'a fancy leather strap ligature',
+          unit_price: 40,
+          image: 'image url',
+          merchant_id: merchant_1.id)
+        item_2 = Item.create(
+          title: 'c* mouthpiece',
+          description: 'a mouthpiece for soft sounds',
+          unit_price: 100,
+          image: 'image url',
+          merchant_id: merchant_2.id)
+        item_3= Item.create(
+          title: 'risers',
+          description: 'left hand palm key risers',
+          unit_price: 20,
+          image: 'image url',
+          merchant_id: merchant_1.id)
+
+          expect(Merchant.highest_priced_item).to eq(merchant_2)
       end
     end
-
   end
 end
