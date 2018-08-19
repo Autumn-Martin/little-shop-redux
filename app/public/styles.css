@@ -1,11 +1,13 @@
+body {
+  letter-spacing: 1px;
+}
 header {
   /* background: #FAF0E6; */
   background: #364958;
-  /* background: #55828b; */
   color: #c9e4ca;
+  font-family: 'Monoton', cursive;
   height: 50px;
   padding: 0 25px;
-  /* border-radius:0;  */
 }
 
 header nav {
@@ -41,7 +43,7 @@ nav li:hover {
 
 .index {
   background: #fefffe;
-
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .dashboard-link {
@@ -55,44 +57,31 @@ nav li:hover {
   color:#c9e4ca;
 }
 
-/* #edit-btn {
-  background: #c9e4ca;
-} */
 #delete-btn {
-  /* background: #982649; */
   background:#3b6064;
   color: white;
 }
 #delete-btn:hover {
   background: #364958;
 }
-/* #merchant {
-  padding: 0% 0%;
-  margin: 0% 0%;
-} */
+
 .jumbotron {
   background: #3b6064;
   color: #c9e4ca;
+  font-family: 'Monoton', cursive;
 }
 .btn {
   padding: 14px 24px;
   letter-spacing: 1px;
-  /* box-shadow: 10px 5px 5px teal; */
-  /* border-radius:0; */
 }
 .col {
   margin-left: 2%;
 }
 .row {
   margin-right: 2%;
-  /* border-left: 2%; */
   outline-style: dotted;
   outline-color: #c9e4ca;
-  /* background: lightgrey; */
 }
-/* .btn.shadow  {
-  box-shadow: 10px 5px 5px teal;
-} */
 
 #merchant-link {
   background:  #c9e4ca;
