@@ -33,6 +33,13 @@ class LittleShopApp < Sinatra::Base
     redirect '/merchants'
   end
 
+  get '/merchants-dashboard' do
+    @merchants = Merchant.all
+    @most_items = Merchant.most_items
+    @highest_priced_item = Merchant.highest_priced_item
+    erb :'merchants-dashboard'
+  end
+
   get '/items' do
     @items = Item.all
     erb :"items/index"
