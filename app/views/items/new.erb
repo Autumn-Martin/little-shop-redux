@@ -1,12 +1,11 @@
 <p>Create New Item:</p>
-
   <form class='edit-item' action='/items' method='POST'>
-    <p>Merchant</br>
-      <!-- need to make drop-down menu here -->
+    <label for="merchant-select">Merchant</label>
+    <select class="form-control" id="merchant-select">
       <%@merchants.each do |merchant|%>
       <option value="<%=merchant.id%>"><%=merchant.name%></option>
       <%end%>
-    </p></br>
+    </select></br>
     <p>Title</br>
     <input type='hidden' name='_method' value='POST'>
     <textarea name='item[title]'></textarea></p></br>
@@ -19,4 +18,3 @@
     <input type='submit' value='Create'></p></br>
   </form>
   <form action="/items"><input type="submit" value="Cancel"></form>
-
