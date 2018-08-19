@@ -12,6 +12,10 @@ class Merchant < ActiveRecord::Base
     items.average(:unit_price)
   end
 
+  def total_price_all_items
+    items.sum(:unit_price) 
+  end
+
 
 
 end

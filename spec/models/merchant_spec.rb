@@ -72,6 +72,25 @@ RSpec.describe Merchant, type: :model do
         merchant_id: merchant_1.id)
 
       expect(merchant_1.average_item_price).to eq(30)
+    end
+    it ".total_price_all_items" do
+      merchant_1 = Merchant.create(name: "sax-o-phones")
+
+      item_1 = Item.create(
+        title: 'rovner ligature',
+        description: 'a fancy leather strap ligature',
+        unit_price: 40,
+        image: 'image url',
+        merchant_id: merchant_1.id)
+
+      item_3= Item.create(
+        title: 'risers',
+        description: 'left hand palm key risers',
+        unit_price: 20,
+        image: 'image url',
+        merchant_id: merchant_1.id)
+
+        expect(merchant_1.total_price_all_items).to eq(60)
     end 
   end
 end
