@@ -11,15 +11,16 @@
           <a href="/merchants/<%= merchant.id %>"> <%= merchant.name %> </a>
         </div>
         <div class="col-1" >
-          <a href="/merchants/<%= merchant.id %>/edit" class="btn btn-info">Edit</a>
+          <a href="/merchants/<%= merchant.id %>/edit" class="btn btn-info btn-shadow" >Edit</a>
         </div>
         <div class="col-1">
           <form action="/merchants/<%= merchant.id %>" method="POST">
             <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" value="delete" id="delete-btn" class="btn"/>
+            <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>
           </form>
         </div>
       </div>
     </div>
+    <br />
   <% end %>
 </section>

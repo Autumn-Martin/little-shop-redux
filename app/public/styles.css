@@ -68,3 +68,15 @@ nav li:hover {
   background: #3b6064;
   color: #c9e4ca;
 }
+.btn {
+  padding: 14px 24px;
+  letter-spacing: 1px;
+  /* box-shadow: 10px 5px 5px teal; */
+  /* border-radius:0; */
+}
+.col {
+  margin-left: 5%;
+}
+/* .btn.shadow  {
+  box-shadow: 10px 5px 5px teal;
+} */
