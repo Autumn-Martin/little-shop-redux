@@ -47,18 +47,11 @@ nav li:hover {
   font-size: 36px;
 }
 
-/* .col-1 {
-  padding-right:2px;
-} */
-#m {
-  background: green;
 
-}
-
-.view-title-bar {
+/* .title-bar {
   background: lightgrey;
   text-align: center;
 }
-.view-title-bar a {
+.title-bar a {
   float: left;
-}
+} */
