@@ -2,7 +2,6 @@
   <section class="jumbotron text-center" style="margin-bottom:5%">
     <a href="/invoices-dashboard" class="dashboard-link">Dashboard</a>
     <h1 class="index-title"style="margin:5%">Invoices</h1>
-    <a href="/invoices/new" class="btn btn-info">Create A New Invoice</a>
   </section>
   <% @invoices.each do |invoice| %>
     <div id="invoice-<%= invoice.id %>" class="container">
