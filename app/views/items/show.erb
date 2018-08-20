@@ -12,9 +12,8 @@
 
   <ul>
     <li><a href="/merchants/<%=@item.merchant.id%>"><%= @item.merchant.name %></a></li>
-    <li><img src='<%= @item.image %>'></li>
+    <li><img src='<%= @item.image %>' alt="placeholder_image" class="image-size"></li>
     <li><%= @item.title %></li>
     <li>$ <%= '%.2f' % @item.price %></li>
     <li><%= @item.description %></li>
   </ul>
-
