@@ -1,5 +1,6 @@
 require './app/models/merchant.rb'
-require './app/models/invoices.rb'
+require './app/models/invoice.rb'
+require './app/models/item.rb'
 require 'CSV'
 
 CSV.foreach('./data/merchants.csv', headers: true, header_converters: :symbol) do |merchant|
