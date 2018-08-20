@@ -69,6 +69,7 @@ nav li:hover {
   background: #3b6064;
   color: #c9e4ca;
   font-family: 'Monoton', cursive;
+  border-radius: 0%;
 }
 .btn {
   padding: 14px 24px;
