@@ -1,4 +1,31 @@
-<ul>
-  <li> Name: <%= @merchant.name %> </li>
-  <li> ID: <%= @merchant.id %> </li>
-</ul>
+<!-- <section class="index">
+  <section class="jumbotron text-center" style="margin-bottom:5%">
+    <a href="/items-dashboard" class="dashboard-link">Dashboard</a>
+    <h1 class="index-title"style="margin:5%">Items</h1>
+    <a href="/merchants/new" class="btn btn-info">Create A New Item</a>
+  </section>
+
+_______________________________ -->
+<section class="index">
+  <section class="jumbotron text-center" style="margin-bottom:5%">
+    <h1 class="index-title"style="margin:5%"><%= @merchant.name %></h1>
+    <a href="/merchants/<%=@merchant.id%>/edit" class="btn btn-info">Edit</a>
+    <!-- <a href="/merchants/<%= @merchant.id %>" class="btn btn-info">Delete</a> -->
+
+    <form class="btn btn-info" action="/merchants/<%= @merchant.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete">
+    </form>
+  </section>
+  <section>
+    <% @merchant.items.each do |item| %>
+      <div>
+        <ul>
+          <li><img src='<%= item.image %>'></li>
+          <li><a href="/items/<%=item.id%>"><%=item.title%></a></li>
+          <li>$ <%='%.2f' % item.unit_price%></li>
+        </ul>
+      </div>
+    <% end %>
+  </section>
+</section>
