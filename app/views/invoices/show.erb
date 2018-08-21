@@ -1,28 +1,32 @@
 <section class="index">
-  <!-- -->
   <section class="jumbotron text-center">
-    <h1 class="index-title">Invoice <%=@invoice.id%> - <%=@invoice.status%></h1>
-    <!-- <a href="/merchants/new" class="btn btn-info">Create A New Merchant</a>     Change to edit and delete buttons-->
+    <h1 class="index-title">Invoice: <%=@invoice.id%> - <%=@invoice.status%></h1>
+    <h2>Edit</h2>
+    <h2>Delete</h2>
   </section>
-  <!-- get the merchant for the invoice and link -->
-  <a href="/merchants/<%= merchant.id %>" class="badge badge-warning" id="merchant-link"> <%= invoice.merchant_id %> </a>
-  <% @invoice.each do |invoice| %>
-    <div id="invoice-<%= invoice.id %>" class="container">
-      <div class="row">
-        <div class="col">
-          <a href="/invoice/<%= invoice.id %>" class="badge badge-warning" id="invoice-link"> <%= invoice.id %> </a>
-        </div>
-        <div class="col-1" >
-          <a href="/invoice/<%= invoice.id %>/edit" class="btn btn-info">Edit</a>
-        </div>
-        <div class="col-1">
-          <form action="/invoice/<%= invoice.id %>" method="POST">
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>
-          </form>
-        </div>
+  <p><a href="">Merchant Name!</a></p>
+    <div>
+      <ul>
+        <li>Item ID</li>
+        <li>Item Title</li>
+        <li>Quantity</li>
+        <li>Unit Price</li>
+      </ul>
+    </div>
+    <% @invoice_item.items.each do |item| %>
+    <div class="row invoice-item-index">
+      <div class="col invoice-item-index">
+        <a href="/items/<%= item.id %>" class="badge" id="item-link"> <%= item.title %> </a>
+      </div>
+      <div class="col-1 invoice-item-index">
+        <%= #item.title %>
+      </div>
+      <div class="col-1 invoice-item-index">
+        <%= #item.quantity %>
+      </div>
+      <div class="col-1 invoice-item-index">
+        <%= #item.unit_price %>
       </div>
     </div>
-    <br />
-  <% end %>
+    <% end %>
 </section>

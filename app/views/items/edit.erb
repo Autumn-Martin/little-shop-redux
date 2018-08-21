@@ -1,21 +1,33 @@
-<p>Edit <%= @item.title %>:</p>
 
-<form class='edit-item' action='/items/<%= @item.id %>' method='POST'>
-  <p>Merchant</br>
-   <!-- need to make a drop down menu here -->
-    <%@merchants.each do |merchant|%>
-    <option value="<%=merchant.id%>"><%=merchant.name%></option>
-    <%end%>
-  </p></br>
-  <p>Title</br>
-  <input type='hidden' name='_method' value='PUT'>
-  <textarea name='item[title]'><%= @item.title %></textarea></p></br>
-  <p>Description</br>
-  <textarea name='item[description]'><%= @item.description %></textarea></p><br/>
-  <p>Price</br>
-  <input type='text' name='item[price]' value='<%= @item.price %>'></p></br>
-  <p>Image URL</br>
-  <input type='text' name='item[image]' value='<%= @item.image %>'></br></br></br>
-  <input type='submit' value='Update Item'></p></br>
-</form>
-<form action="/items"><input type="submit" value="Cancel"></form>
+<section class="jumbotron text-center" style="margin-bottom:5%">
+  <h1 class="index-title"style="margin:5%">Edit <%= @item.title %>:</h1>
+</section>
+<section class="edit-body">
+  <div class="edit-square">
+    <form class='edit-item' action='/items/<%= @item.id %>' method='POST'>
+      <h3>Merchant</h3>
+      <select>
+        <%@merchants.each do |merchant|%>
+          <option value="<%=merchant.id%>"><%=merchant.name%></option>
+        <%end%>
+      </select>
+      <h3>Title</h3>
+      <input type='hidden' name='_method' value='PUT'>
+      <textarea rows='1' cols='65' class='green-line' name='item[title]'><%= @item.title %></textarea>
+      <h3>Description</h3>
+      <textarea rows='5' cols='65' class='green-line' name='item[description]'><%= @item.description %></textarea>
+      <h3>Price</h3>
+      <input type='text' class='green-line' name='item[unit_price]' value='<%= @item.unit_price %>'>
+      <h3>Image URL</h3>
+      <input type='text' class='green-line' name='item[image]' value='<%= @item.image %>'>
+      <div class='row edit-buttons'>
+        <div class='col'>
+          <input type='submit' value='Update Item'>
+        </div>
+        <div class='col'>
+          <form action="/items"><input type="submit" value="Cancel"></form>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

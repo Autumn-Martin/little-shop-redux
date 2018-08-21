@@ -218,3 +218,35 @@ a#invoice-link.badge{
   height: 100%;
   margin-right: 0;
 }
+/* Item Edit page styling */
+h3 {
+  padding: 20px 0px;
+  font-size: 20px;
+}
+.edit-body {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2%;
+  text-align: left;
+}
+.edit-square {
+  background: #DFEBE4;
+  padding: 5% 10%;
+}
+.edit-body textarea {
+  padding: 20px 3%;
+}
+.green-line {
+  outline-style: solid;
+  outline-color: #87bba2;
+}
+.edit-body input {
+  padding: 10px 10px;
+}
+form .edit-item {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.row.edit-buttons {
+  margin-top: 5%;
+}

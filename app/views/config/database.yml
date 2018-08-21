@@ -1,0 +1,13 @@
+# specify which database and adapter to use for which environment
+
+development:
+  adapter: postgresql
+  database: little-shop-development
+
+test:
+  adapter: postgresql
+  database: little-shop-test
+
+production:
+  adapter: postgresql
+  database: little-shop-production
