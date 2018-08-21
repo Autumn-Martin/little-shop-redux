@@ -6,4 +6,8 @@ class Item < ActiveRecord::Base
   validates_presence_of :description
   validates_presence_of :unit_price
   validates_presence_of :image
+
+  def average_unit_price
+    items.average(:unit_price)
+  end
 end
