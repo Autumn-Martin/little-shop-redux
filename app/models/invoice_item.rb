@@ -7,4 +7,21 @@ class InvoiceItem < ActiveRecord::Base
   belongs_to :item
   belongs_to :invoice
 
+  def percent_pending
+    #get count all items with pending / items.count
+    items.group(:pending).count / items.count
+  end
+
+  def percent_shipped
+    #get count all items with shipped / items.count
+  end
+
+  def percent_returned
+    #get count all items with returned / items.count
+  end
+
+  def method_name
+
+  end
+
 end
