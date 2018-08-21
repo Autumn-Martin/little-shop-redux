@@ -1,5 +1,6 @@
-<p>Edit <%= @item.title %>:</p>
-
+<section class="jumbotron text-center" style="margin-bottom:5%">
+  <h1 class="index-title"style="margin:5%">Edit <%= @item.title %>:</h1>
+</section>
 <form class='edit-item' action='/items/<%= @item.id %>' method='POST'>
   <p>Merchant</br>
    <!-- need to make a drop down menu here -->
@@ -13,7 +14,7 @@
   <p>Description</br>
   <textarea name='item[description]'><%= @item.description %></textarea></p><br/>
   <p>Price</br>
-  <input type='text' name='item[price]' value='<%= @item.price %>'></p></br>
+  <input type='text' name='item[price]' value='<%= @item.unit_price %>'></p></br>
   <p>Image URL</br>
   <input type='text' name='item[image]' value='<%= @item.image %>'></br></br></br>
   <input type='submit' value='Update Item'></p></br>
