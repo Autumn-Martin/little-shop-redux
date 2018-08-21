@@ -4,6 +4,15 @@ class Invoice < ActiveRecord::Base
   belongs_to :merchant
   has_many :invoice_items
 
+  def self.grouped_status
+    items.group(:status).count
+  end
+
+  def self.percent(category)
+    require 'pry'; binding.pry
+    grouped_status[category] / items.count
+  end
+
   def percent_shipped
     #get count all items with shipped / items.count
 
