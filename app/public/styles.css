@@ -302,3 +302,6 @@ h2 {
   outline-color: #c9e4ca;
   margin-bottom: 5%;
 }
+.jumbotron.text-center.less-pad {
+  padding: 5% 5%;
+}
