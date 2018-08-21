@@ -18,5 +18,13 @@ RSpec.describe 'Merchant index page' do
       expect(current_path).to eq("/merchants/new")
     end
 
+    it 'can edit a merchant' do
+      visit '/merchants'
+
+      first(:link, 'Edit').click
+
+      expect(current_path).to eq("/merchants/#{@merchant_1.id}/edit")
+    end
+
   end
 end
