@@ -19,6 +19,11 @@ RSpec.describe "Invoice Show" do
 
     expect(page).to have_content("Invoice: #{@invoice_1.id} - #{@invoice_1.status}")
   end
+  it "sees merchants name" do
+    visit "/invoices/#{@invoice_1.id}"
+
+    expect(page).to have_content(@invoice_1.merchant.name)
+  end
 
 
 
