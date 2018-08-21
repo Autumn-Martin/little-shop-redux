@@ -26,5 +26,16 @@ RSpec.describe 'Merchant index page' do
       expect(current_path).to eq("/merchants/#{@merchant_1.id}/edit")
     end
 
+    it "can delete a merchant" do
+
+      visit '/merchants'
+
+      first(:button, 'Delete').click
+
+      expect(current_path).to eq('/merchants')
+      expect(page).to_not have_content(@merchant_1.name)
+      expect(page).to have_content(@merchant_2.name)
+    end
+
   end
 end
