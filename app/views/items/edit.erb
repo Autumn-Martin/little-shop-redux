@@ -13,9 +13,9 @@
       </select>
       <h3>Title</h3>
       <input type='hidden' name='_method' value='PUT'>
-      <textarea rows='1' cols='65' class='green-line' name='item[title]'><%= @item.title %></textarea>
+      <textarea rows='1' cols='60' class='green-line' name='item[title]'><%= @item.title %></textarea>
       <h3>Description</h3>
-      <textarea rows='5' cols='65' class='green-line' name='item[description]'><%= @item.description %></textarea>
+      <textarea rows='5' cols='60' class='green-line' name='item[description]'><%= @item.description %></textarea>
       <h3>Price</h3>
       <input type='text' class='green-line' name='item[unit_price]' value='<%= @item.unit_price %>'>
       <h3>Image URL</h3>
@@ -25,7 +25,7 @@
           <input type='submit' value='Update Item' class='btn btn-info' class='btn edit'>
         </div>
         <div class='col'>
-          <form action="/items"><input type="submit" value="Cancel" class='btn edit'></form>
+          <form action="/items"><input type="reset" value="Cancel" class='btn edit'></form>
         </div>
       </div>
     </form>
