@@ -30,7 +30,7 @@ end
 Merchant.count
 
 CSV.foreach('./data/invoices.csv', headers: true, header_converters: :symbol) do |invoice|
-  if invoice[:merchant_id] && invoice[:status]
+  if invoice[:id] && invoice[:status]
     Invoice.create(
                     id:               invoice[:id],
                     merchant_id:      invoice[:merchant_id],
