@@ -115,4 +115,15 @@ class LittleShopApp < Sinatra::Base
     Invoice.destroy(params[:id])
     redirect '/invoices'
   end
+
+  get '/invoices-dashboard' do
+    @percent_pending = 0
+    @percent_shipped = 0
+    @percent_returned = 0
+    @highest_price_invoices = 0
+    @lowest_price_invoices = 0
+    @highest_quantity_invoices = 0
+    @lowest_quantity_invoices = 0
+    erb :'invoices/invoices-dashboard'
+  end
 end
