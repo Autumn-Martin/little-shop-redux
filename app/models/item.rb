@@ -23,4 +23,5 @@ class Item < ActiveRecord::Base
   def self.oldest
     order("created_at").last
   end
+  
 end

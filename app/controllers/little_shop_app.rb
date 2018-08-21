@@ -93,7 +93,6 @@ class LittleShopApp < Sinatra::Base
   get '/invoices/:id' do
     @items = Item.all
     @invoice = Invoice.find(params[:id])
-    # require 'pry'; binding.pry
     erb :"invoices/show"
   end
 
@@ -116,5 +115,16 @@ class LittleShopApp < Sinatra::Base
   delete '/invoices/:id' do
     Invoice.destroy(params[:id])
     redirect '/invoices'
+  end
+
+  get '/invoices-dashboard' do
+    @percent_pending = Invoice.percent("pending")
+    @percent_shipped = Invoice.percent("shipped")
+    @percent_returned = Invoice.percent("returned")
+    @highest_price_invoice = InvoiceItem.invoice_price_high
+    @lowest_price_invoice = InvoiceItem.invoice_price_low
+    @highest_quantity_invoices = InvoiceItem.high_quantity_invoice
+    @lowest_quantity_invoices = InvoiceItem.low_quantity_invoice
+    erb :'invoices/invoices-dashboard'
   end
 end
