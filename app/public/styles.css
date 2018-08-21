@@ -124,7 +124,7 @@ nav li:hover {
   border-radius: 5%;
 }
 .item-container img {
-  width: 100px;
+  width: 200px;
   height: auto;
 }
 .row.best-merchants {
@@ -218,6 +218,7 @@ a#invoice-link.badge{
   height: 100%;
   margin-right: 0;
 }
+
 /* Item Edit page styling */
 h3 {
   padding: 20px 0px;
@@ -249,4 +250,22 @@ form .edit-item {
 }
 .row.edit-buttons {
   margin-top: 5%;
+}
+
+.input-form {
+  width: 100%;
+  text-align: center;
+}
+
+.input-form label {
+  font-size: 18px;
+}
+
+.input-form input[type=text] {
+  padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #364958;
+    border-radius: 4px;
+    font-size: 18px;
 }
