@@ -7,7 +7,19 @@ class Item < ActiveRecord::Base
   validates_presence_of :unit_price
   validates_presence_of :image
 
-  def average_unit_price
-    items.average(:unit_price)
+  def self.average_unit_price
+    average(:unit_price)
+  end
+
+  def self.total_item_count
+    count(:id)
+  end
+
+  def self.newest
+    order("created_at").first
+  end
+
+  def self.oldest
+    order("created_at").last
   end
 end
