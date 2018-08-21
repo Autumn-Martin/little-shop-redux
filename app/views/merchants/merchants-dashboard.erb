@@ -1,31 +1,40 @@
 <section class="merchant-dashboard-page">
   <section class="jumbotron text-center" style="margin-bottom:5%">
-    <h1 class="index-title"style="margin:5%">Merchants Dashboard</h1>
+    <h1 class="index-title"style="margin:5%">Merchants  Dashboard</h1>
   </section>
 
-  <section class="best-merchants">
-    <div class ="row best-merchants">
-      <div class="col best-merchants">
-        <p>Merchant With Most Items:</p>
-        <br>
-        <a href="/merchants/<%=@most_items.id%>"><p><%= @most_items.name %></p></a>
+  <section class="merchant-dash-body">
+    <section class="best-merchants">
+      <div class ="row best-merchants">
+        <div class="col best-merchants">
+          <p>Merchant With Most Items:</p>
+          <br>
+          <a href="/merchants/<%=@most_items.id%>"><p><%= @most_items.name %></p></a>
+        </div>
+        <div class="col best-merchants">
+          <p>Merchant With Highest Price Item:</p>
+          <br>
+          <a href="/merchants/<%=@highest_priced_item.id%>"><p><%= @highest_priced_item.name %></p></a>
+        </div>
       </div>
-      <div class="col best-merchants">
-        <p>Merchant With Highest Price Item:</p>
-        <br>
-        <a href="/merchants/<%=@highest_priced_item.id%>"><p><%= @highest_priced_item.name %></p></a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <% @merchants.each do |merchant| %>
-      <ul>
-        <li><a href="/merchants/<%=merchant.id%>"><p><%= merchant.name %></p></a>
-        <li><p>Item Count: <%= merchant.total_merchant_items %></p></li>
-        <li><p>Avg Item Price: $ <%= '%.2f' % merchant.average_item_price %></p></li>
-        <li><p>Total Cost of Items: $ <%= '%.2f' % merchant.total_price_all_items %></p></li>
-      </ul>
-    <% end %>
+    <section class="merchant-cubes">
+      <% @merchants.each do |merchant| %>
+      <div id="merchant-<%= merchant.id %>" class="merchant-container">
+        <div class="col">
+            <ul>
+              <li class="underline"><a href="/merchants/<%=merchant.id%>"><%= merchant.name %></a>
+              <li class="underline">Item Count:</li>
+              <li><%= merchant.total_merchant_items %></li>
+              <li class="underline">Avg Item Price:<li>
+              <li><%= '$%.2f' % merchant.average_item_price %></li>
+              <li class="underline">Total Cost of Items:</li>
+              <li><%= '$%.2f' % merchant.total_price_all_items %></li>
+            </ul>
+          </div>
+      </div>
+      <% end %>
+    </section>
   </section>
 </section>
