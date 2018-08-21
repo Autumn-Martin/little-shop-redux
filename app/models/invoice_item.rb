@@ -8,11 +8,15 @@ class InvoiceItem < ActiveRecord::Base
   belongs_to :invoice
 
   def self.item_price_high
-    order("unit_price DESC").first.item_id
+    order("unit_price DESC").first.invoice_id
   end
 
   def self.item_price_low
-    order("unit_price ASC").first.item_id
+    order("unit_price ASC").first.invoice_id
+  end
+
+  def self.high_item_invoice
+
   end
 
 end
