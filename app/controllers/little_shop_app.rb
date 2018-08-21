@@ -95,6 +95,12 @@ class LittleShopApp < Sinatra::Base
     erb :"invoices/show"
   end
 
+  get '/invoices/:id/edit' do
+    @invoices = Invoice.all
+    @invoice = Invoice.find(params[:id])
+    erb :'invoices/edit'
+  end
+
   post '/invoices' do
     Invoice.create(params[:invoice])
     redirect '/invoices'
