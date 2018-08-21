@@ -93,6 +93,7 @@ class LittleShopApp < Sinatra::Base
   get '/invoices/:id' do
     @items = Item.all
     @invoice = Invoice.find(params[:id])
+    @merchant = Merchant.where(id: @invoice.merchant_id)
     # require 'pry'; binding.pry
     erb :"invoices/show"
   end

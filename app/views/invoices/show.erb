@@ -1,6 +1,6 @@
 <section">
   <section class="jumbotron text-center">
-    <h1 class="show-title"style="margin:5%">Invoice: <%=@invoice.id%> - <%=@invoice.status%></h1>
+    <h1 class="show-title" style="margin:5%">Invoice: <%=@invoice.id%> - <%=@invoice.status%></h1>
     <form action="/invoices/<%= @invoice.id %>" method="POST">
       <div class="row show-buttons">
         <div class='col'>
@@ -15,8 +15,7 @@
 
 
 </section>
-  <h2><a href="/merchants/<%= @invoice.merchant_id %>" class="badge" id="merchant-link">Merchant Name</h2>
-
+  <h2><a href="/merchants/<%= @invoice.merchant_id %>" class="badge" id="merchant-link"><%= @merchant.first.name %></h2>
     <% @invoice.invoice_items.each do |invoice_item| %>
     <div class="row invoice-item-index">
       <div class="col invoice-item-index">
