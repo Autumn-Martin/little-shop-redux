@@ -305,3 +305,14 @@ h2 {
 .jumbotron.text-center.less-pad {
   padding: 5% 5%;
 }
+
+/* editing item/edit buttons */
+.btn.edit {
+  background:#364958;
+  color: white;
+  margin-right: 1%;
+}
+
+.btn.edit:hover {
+  background: #364958;
+}
