@@ -1,1 +1,14 @@
-Hello I am edit page
+<section class="index">
+  <section class="jumbotron text-center" style="margin-bottom:5%">
+    <h1 class="index-title"style="margin:5%">Edit <%= @merchant.name %></h1>
+  </section>
+
+  <form action="/merchants/<%= @merchant.id %>" method="POST">
+    <h1>Edit <%= @merchant.name %></h1>
+    <input type="hidden" name="_method" value="PUT">
+    <label>Name</label><br>
+    <input type="text" name="merchant[name]" placeholder="<%= @merchant.name %>"><br>
+    <input type="submit" value="Edit Merchant"><br>
+  </form>
+    <a href="/merchants"><button>Cancel</button></a>
+</section>

@@ -1,14 +1,16 @@
-<p><a href="/items-dashboard">Dashboard</a></p>
-<h1>Items</h1>
+<section class="index">
+  <section class="jumbotron text-center" style="margin-bottom:5%">
+    <a href="/items-dashboard" class="dashboard-link">Dashboard</a>
+    <h1 class="index-title"style="margin:5%">Items</h1>
+    <a href="/merchants/new" class="btn btn-info">Create A New Item</a>
+  </section>
 
-<form method="get" action="items/new">
-  <button type="submit">Create A New Item</button>
-</form>
+    <% @items.each do |item| %>
+      <ul>
+        <li><img src="item.png" alt="image placeholder"/>
+        <li><a href="/items/<%=item.id%>"><%=item.title.truncate_words(3)%></a></li></br>
+        <li>$ <%='%.2f' % item.unit_price%></li></br>
+      </ul>
+    <% end %>
 
-<% @items.each do |item| %>
-  <ul>
-    <li><img src="item.png" alt="image placeholder"/>
-    <li><a href="/items/<%=item.id%>"><%=item.title.truncate_words(3)%></a></li></br>
-    <li>$ <%='%.2f' % item.unit_price%></li></br>
-  </ul>
-<% end %>
+</section>
