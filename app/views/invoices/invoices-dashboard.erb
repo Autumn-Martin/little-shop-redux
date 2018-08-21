@@ -1,0 +1,20 @@
+<h1>Invoices Dashboard</h1>
+
+<section>
+  <div class="box-1">
+    <h5>Status Percentages </h5>
+    <h5>Pending <%= @percent_pending %> %</h5>
+    <h5>Shipped <%= @percent_shipped %> %</h5>
+    <h5>Returned <%= @percent_returned %> %</h5>
+  </div>
+  <div class="box-2">
+    <h5>Unit Prices </h5>
+    <h5>Highest Invoice: <%= @highest_price_invoices %> %</h5>
+    <h5>Lowest Invoice: <%= @lowest_price_invoices %> %</h5>
+  </div>
+  <div class="box-3">
+      <h5>Quantity </h5>
+      <h5>Highest Invoice: <%= @highest_quantity_invoices %> %</h5>
+      <h5>Lowest Invoice: <%= @lowest_quantity_invoices  %> %</h5>
+  </div>
+</section>
