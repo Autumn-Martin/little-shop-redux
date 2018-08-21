@@ -9,12 +9,12 @@
         <div class="col best-merchants">
           <p>Merchant With Most Items:</p>
           <br>
-          <a href="/merchants/<%=@most_items.id%>"><p><%= @most_items.name %></p></a>
+          <a href="/merchants/<%=@most_items.id%>" class="underline"><p><%= @most_items.name %></p></a>
         </div>
         <div class="col best-merchants">
           <p>Merchant With Highest Price Item:</p>
           <br>
-          <a href="/merchants/<%=@highest_priced_item.id%>"><p><%= @highest_priced_item.name %></p></a>
+          <a href="/merchants/<%=@highest_priced_item.id%>" class="underline"><p><%= @highest_priced_item.name %></p></a>
         </div>
       </div>
     </section>
@@ -24,7 +24,7 @@
       <div id="merchant-<%= merchant.id %>" class="merchant-container">
         <div class="col">
             <ul>
-              <li class="underline"><a href="/merchants/<%=merchant.id%>"><%= merchant.name %></a>
+              <li class="underline"><a href="/merchants/<%=merchant.id%>"><b><%= merchant.name %></b></a>
               <li class="underline">Item Count:</li>
               <li><%= merchant.total_merchant_items %></li>
               <li class="underline">Avg Item Price:<li>

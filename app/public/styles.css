@@ -110,16 +110,12 @@ nav li:hover {
   background: #364958;
   color: #c9e4ca;
   text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
   margin-left: 5%;
   margin-right: 5%;
   padding: 2%;
 }
 .row.best-merchants {
-  /* background: #364958;
-  color: #c9e4ca; */
   text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
 }
 .col.best-merchants {
   text-align: left;
@@ -129,16 +125,17 @@ nav li:hover {
 .merchant-dashboard-page {
   text-align: center;
   font-size: 18px;
-
+  font-family: 'Josefin Sans', sans-serif;
 
 }
 
 /* a:visited {
   color: red;
-}
-a:link {
-  color: red;
 } */
+
+a:hover {
+  color: #18a2b8;
+}
 
 section a {
   color: #11bbd7;
@@ -159,6 +156,9 @@ section a {
 
 .underline {
   text-decoration: underline;
+}
+.bold {
+  text-decoration: 
 }
 
 /* .merchant-dash-body {
