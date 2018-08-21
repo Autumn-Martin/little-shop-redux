@@ -22,9 +22,5 @@ class Item < ActiveRecord::Base
   def self.oldest
     order("created_at").last
   end
-
-  def self.percent_pending
-    #get count all items with pending / items.count
-    group(:pending).count / total_item_count
-  end
+  
 end
