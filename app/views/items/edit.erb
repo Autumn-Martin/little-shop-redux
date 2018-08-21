@@ -3,10 +3,11 @@
 </section>
 <form class='edit-item' action='/items/<%= @item.id %>' method='POST'>
   <p>Merchant</br>
-   <!-- need to make a drop down menu here -->
-    <%@merchants.each do |merchant|%>
-    <option value="<%=merchant.id%>"><%=merchant.name%></option>
-    <%end%>
+     <select>
+      <%@merchants.each do |merchant|%>
+        <option value="<%=merchant.id%>"><%=merchant.name%></option>
+      <%end%>
+    </select>
   </p></br>
   <p>Title</br>
   <input type='hidden' name='_method' value='PUT'>
