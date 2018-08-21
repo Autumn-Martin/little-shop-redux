@@ -21,6 +21,17 @@ RSpec.describe 'Invoice Index Page' do
 
       expect(current_path).to eq("/invoices/#{@invoice_1.id}/edit")
     end
+    it 'delete an invoice and go to index' do
+
+      visit "/invoices"
+
+      first(:button, 'Delete').click
+
+      expect(current_path).to eq("/invoices")
+
+      expect(page).to have_content(@invoice_2.id)
+      expect(page).to_not have_content(@invoice_1.id)
+    end
 
   end
 end
