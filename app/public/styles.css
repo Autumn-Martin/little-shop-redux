@@ -112,6 +112,20 @@ nav li:hover {
   margin-right: 5%;
   padding: 2%;
 }
+
+.item-container {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 2% 2%;
+  background: #DFEBE4;
+  padding: 20px 20px;
+  border-radius: 5%;
+}
+.item-container img {
+  width: 100px;
+  height: auto;
+}
 .row.best-merchants {
   text-align: center;
 }
