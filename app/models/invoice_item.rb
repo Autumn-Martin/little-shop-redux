@@ -7,4 +7,12 @@ class InvoiceItem < ActiveRecord::Base
   belongs_to :item
   belongs_to :invoice
 
+  def self.grouped_status
+    items.group(:status).count
+  end
+
+  def self.percent(category)
+    grouped_status[category] / items.count
+  end
+
 end

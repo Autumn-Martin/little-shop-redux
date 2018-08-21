@@ -117,9 +117,9 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/invoices-dashboard' do
-    @percent_pending = Invoice.percent_pending
-    @percent_shipped = 0
-    @percent_returned = 0
+    @percent_pending = Invoice.percent("pending")
+    @percent_shipped = Invoice.percent("shipped")
+    @percent_returned = Invoice.percent("returned")
     @highest_price_invoices = 0
     @lowest_price_invoices = 0
     @highest_quantity_invoices = 0
