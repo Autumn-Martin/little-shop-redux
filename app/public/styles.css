@@ -135,7 +135,7 @@ nav li:hover {
 }
 
 .merchant-dashboard-page {
-  text-align: center;
+  /* text-align: center; */
   font-size: 18px;
   font-family: 'Josefin Sans', sans-serif;
 
@@ -181,3 +181,60 @@ section a {
 }
 
 /* Styling for item page */
+
+/*Styling for item index page */
+
+.col.invoice-index {
+  /* margin-left: 2%; */
+}
+.row.invoice-index {
+  /* margin-right: 2%; */
+  outline-style: dotted;
+  outline-color: #c9e4ca;
+}
+.invoice-index-body {
+  vertical-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+a#invoice-link.badge{
+  padding: 20px;
+  font-size: 16px;
+}
+
+a.btn.btn-info{
+  margin-right: 5%;
+
+}
+/* Item Edit page styling */
+h3 {
+  padding: 20px 0px;
+  font-size: 20px;
+}
+.edit-body {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2%;
+  text-align: left;
+}
+.edit-square {
+  background: #DFEBE4;
+  padding: 5% 10%;
+}
+.edit-body textarea {
+  padding: 20px 3%;
+}
+.green-line {
+  outline-style: solid;
+  outline-color: #87bba2;
+}
+.edit-body input {
+  padding: 10px 10px;
+}
+form .edit-item {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.row.edit-buttons {
+  margin-top: 5%;
+}
