@@ -58,7 +58,7 @@ nav li:hover {
 }
 
 #delete-btn {
-  background:#3b6064;
+  background:#364958;
   color: white;
   margin-right: 1%;
 }
@@ -268,4 +268,20 @@ form .edit-item {
     border: 2px solid #364958;
     border-radius: 4px;
     font-size: 18px;
+}
+/* Invoice Show Page Styling */
+
+
+.show-title {
+  font-size: 36px;
+  color:#c9e4ca;
+}
+.row.show-buttons {
+  margin-top: 5%;
+}
+.row.show-buttons#delete-btn {
+  background:#3b6064;
+  color: white;
+  height: 100%;
+  margin-right: 0;
 }

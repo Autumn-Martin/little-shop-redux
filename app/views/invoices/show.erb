@@ -1,9 +1,20 @@
-<section class="index">
+<section">
   <section class="jumbotron text-center">
-    <h1 class="index-title">Invoice: <%=@invoice.id%> - <%=@invoice.status%></h1>
-    <h2>Edit</h2>
-    <h2>Delete</h2>
-  </section>
+    <h1 class="show-title"style="margin:5%">Invoice: <%=@invoice.id%> - <%=@invoice.status%></h1>
+    <form action="/invoices/<%= @invoice.id %>" method="POST">
+      <div class="row show-buttons">
+        <div class='col'>
+          <a href="/invoices/<%= @invoice.id %>/edit" class="btn btn-info">Edit</a>
+        </div>
+        <div class='col'>
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>
+        </div>
+      </div>
+    </form>
+
+
+</section>
 
   <p><a href="">Merchant Name</a></p>
     <div>
