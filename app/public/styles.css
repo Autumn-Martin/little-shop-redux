@@ -134,6 +134,17 @@ nav li:hover {
 
 }
 
+/* a:visited {
+  color: red;
+}
+a:link {
+  color: red;
+} */
+
+a:hover {
+  color: #11bbd7;
+}
+
 /* Styling for item page */
 .image-size {
   width: 200px;

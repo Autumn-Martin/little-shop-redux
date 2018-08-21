@@ -13,7 +13,7 @@
       <div class="col best-merchants">
         <p>Merchant With Highest Price Item:</p>
         <br>
-        <p><%= @highest_priced_item.name %></p>
+        <a href="/merchants/<%=@highest_priced_item.id%>"><p><%= @highest_priced_item.name %></p></a>
       </div>
     </div>
   </section>
