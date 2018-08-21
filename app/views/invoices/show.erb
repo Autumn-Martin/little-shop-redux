@@ -15,16 +15,8 @@
 
 
 </section>
+  <h2><a href="/merchants/<%= @invoice.merchant_id %>" class="badge" id="merchant-link">Merchant Name</h2>
 
-  <p><a href="">Merchant Name</a></p>
-    <div>
-      <ul>
-        <li>Item ID</li>
-        <li>Item Title</li>
-        <li>Quantity</li>
-        <li>Unit Price</li>
-      </ul>
-    </div>
     <% @invoice.invoice_items.each do |invoice_item| %>
     <div class="row invoice-item-index">
       <div class="col invoice-item-index">

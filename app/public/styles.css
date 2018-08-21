@@ -285,3 +285,8 @@ form .edit-item {
   height: 100%;
   margin-right: 0;
 }
+h2 {
+  padding: 20px 0px;
+  font-size: 25px;
+  text-align: center; 
+}
