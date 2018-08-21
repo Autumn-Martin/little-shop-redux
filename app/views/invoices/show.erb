@@ -1,0 +1,28 @@
+<section class="index">
+  <!-- -->
+  <section class="jumbotron text-center" style="margin-bottom:5%">
+    <h1 class="index-title">Invoice <%=invoice.id%> - <%=invoice.status%></h1>
+    <!-- <a href="/merchants/new" class="btn btn-info">Create A New Merchant</a>     Change to edit and delete buttons-->
+  </section>
+  <!-- get the merchant for the invoice and link -->
+  <a href="/merchants/<%= merchant.id %>" class="badge badge-warning" id="merchant-link"> <%= invoice.merchant_id %> </a>
+  <% @invoice.each do |invoice| %>
+    <div id="invoice-<%= invoice.id %>" class="container">
+      <div class="row">
+        <div class="col">
+          <a href="/invoice/<%= invoice.id %>" class="badge badge-warning" id="invoice-link"> <%= invoice.id %> </a>
+        </div>
+        <div class="col-1" >
+          <a href="/invoice/<%= invoice.id %>/edit" class="btn btn-info">Edit</a>
+        </div>
+        <div class="col-1">
+          <form action="/invoice/<%= invoice.id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br />
+  <% end %>
+</section>
