@@ -1,21 +1,27 @@
-<section class="jumbotron text-center" style="margin-bottom:5%">
-  <h1 class="index-title"style="margin:5%">Merchants Dashboard</h1>
-</section>
+<section class="merchant-dashboard-page">
+  <section class="jumbotron text-center" style="margin-bottom:5%">
+    <h1 class="index-title"style="margin:5%">Merchants Dashboard</h1>
+  </section>
 
-<section class = "best-merchants">
-  <div class ="row">
-    <h5>Merchant With Most Items: <%= @most_items.name %></h5>
-    <h5>Merchant With Highest Price Item: <%= @highest_priced_item.name %></h5>
-  </div>
-</section>
+  <section class="best-merchants">
+    <div class ="row best-merchants">
+      <div class="col best-merchants">
+        <p>Merchant With Most Items: <%= @most_items.name %></p>
+      </div>
+      <div class="col best-merchants">
+        <p>Merchant With Highest Price Item: <%= @highest_priced_item.name %></p>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <% @merchants.each do |merchant| %>
-    <ul>
-      <li><a href="/merchants/<%=merchant.id%>"><p><%= merchant.name %></p></a>
-      <li><p>Item Count: <%= merchant.total_merchant_items %></p></li>
-      <li><p>Avg Item Price: $ <%= '%.2f' % merchant.average_item_price %></p></li>
-      <li><p>Total Cost of Items: $ <%= '%.2f' % merchant.total_price_all_items %></p></li>
-    </ul>
-  <% end %>
+  <section>
+    <% @merchants.each do |merchant| %>
+      <ul>
+        <li><a href="/merchants/<%=merchant.id%>"><p><%= merchant.name %></p></a>
+        <li><p>Item Count: <%= merchant.total_merchant_items %></p></li>
+        <li><p>Avg Item Price: $ <%= '%.2f' % merchant.average_item_price %></p></li>
+        <li><p>Total Cost of Items: $ <%= '%.2f' % merchant.total_price_all_items %></p></li>
+      </ul>
+    <% end %>
+  </section>
 </section>

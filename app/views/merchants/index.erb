@@ -6,14 +6,14 @@
   </section>
   <% @merchants.each do |merchant| %>
     <div id="merchant-<%= merchant.id %>" class="container">
-      <div class="row">
-        <div class="col">
+      <div class="row merchant-index">
+        <div class="col merchant-index">
           <a href="/merchants/<%= merchant.id %>" class="badge" id="merchant-link"> <%= merchant.name %> </a>
         </div>
-        <div class="col-1" >
+        <div class="col-1 merchant-index" >
           <a href="/merchants/<%= merchant.id %>/edit" class="btn btn-info">Edit</a>
         </div>
-        <div class="col-1">
+        <div class="col-1 merchant-index">
           <form action="/merchants/<%= merchant.id %>" method="POST">
             <input type="hidden" name="_method" value="DELETE">
             <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>

@@ -74,10 +74,10 @@ nav li:hover {
 .btn {
   padding: 14px 24px;
 }
-.col {
+.col.merchant-index {
   margin-left: 2%;
 }
-.row {
+.row.merchant-index {
   margin-right: 2%;
   outline-style: dotted;
   outline-color: #c9e4ca;
@@ -102,5 +102,34 @@ nav li:hover {
   /* background: purple; */
   text-align: center;
   /* display: inline-block; */
+
+}
+
+/* begin merchants-dashboard styling */
+.best-merchants {
+  background: #364958;
+  color: #c9e4ca;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 2%;
+}
+.row.best-merchants {
+  /* background: #364958;
+  color: #c9e4ca; */
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif; */
+
+}
+.col.best-merchants {
+  text-align: left;
+  vertical-align: center;
+}
+
+.merchant-dashboard-page {
+  text-align: center;
+
+
 
 }
