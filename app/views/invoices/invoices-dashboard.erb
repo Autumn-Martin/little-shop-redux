@@ -9,12 +9,12 @@
   </div>
   <div class="box-2">
     <h5>Unit Prices </h5>
-    <h5>Highest Invoice: <%= @highest_price_invoice %> </h5>
-    <h5>Lowest Invoice: <%= @lowest_price_invoice %> </h5>
+    <h5>Highest Invoice: <a href="/invoices/<%= @highest_price_invoice%>"><%= @highest_price_invoice %></a> </h5>
+    <h5>Lowest Invoice: <a href="/invoices/<%= @lowest_price_invoice%>"><%= @lowest_price_invoice %></a> </h5>
   </div>
   <div class="box-3">
       <h5>Quantity </h5>
-      <h5>Highest Invoice: <%= @highest_quantity_invoices %> </h5>
-      <h5>Lowest Invoice: <%= @lowest_quantity_invoices  %> </h5>
+      <h5>Highest Invoice: <a href="/invoices/<%= @highest_quantity_invoices%>"><%= @highest_quantity_invoices %> </a></h5>
+      <h5>Lowest Invoice: <a href="/invoices/<%= @lowest_quantity_invoice%>"><%= @lowest_quantity_invoices  %> </a></h5>
   </div>
 </section>
