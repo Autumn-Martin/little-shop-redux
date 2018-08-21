@@ -13,5 +13,14 @@ RSpec.describe 'Invoice Index Page' do
       expect(page).to_not have_content(@invoice_1.status)
       expect(page).to_not have_content(@invoice_2.status)
     end
+    it 'can click on edit and go invoice edit' do
+
+      visit '/invoices'
+
+      first(:link, 'Edit').click
+
+      expect(current_path).to eq("/invoices/#{@invoice_1.id}/edit")
+    end
+
   end
 end
