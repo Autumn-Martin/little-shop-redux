@@ -11,19 +11,10 @@
     <div class="item-container">
       <div class="col">
         <img src="item.png" alt="image placeholder"/>
-        <p><a href="/items/<%=item.id%>"><%=item.title.truncate_words(2)%></a></p>
+        <p><a href="/items/<%=item.id%>"><%=item.title.truncate(23)%></a></p>
         <p>$ <%='%.2f' % item.unit_price%></p>
       </div>
     </div>
     <% end %>
   </section>
-
-    <!-- <% @items.each do |item| %>
-      <ul>
-        <li><img src="item.png" alt="image placeholder"/>
-        <li><a href="/items/<%=item.id%>"><%=item.title.truncate_words(3)%></a></li></br>
-        <li>$ <%='%.2f' % item.unit_price%></li></br>
-      </ul>
-    <% end %> -->
-
 </section>
