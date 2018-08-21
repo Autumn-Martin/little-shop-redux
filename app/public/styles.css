@@ -99,9 +99,7 @@ nav li:hover {
   color:#c9e4ca;
 }
 .new-page {
-  /* background: purple; */
   text-align: center;
-  /* display: inline-block; */
 
 }
 
@@ -129,10 +127,6 @@ nav li:hover {
 
 }
 
-/* a:visited {
-  color: red;
-} */
-
 a:hover {
   color: #18a2b8;
 }
@@ -158,13 +152,9 @@ section a {
   text-decoration: underline;
 }
 .bold {
-  text-decoration: 
+  text-decoration:
 }
 
-/* .merchant-dash-body {
-  margin-left: 5%;
-  margin-right: 5%;
-} */
 .merchant-cubes{
   margin-top: 3%;
   border: 0;
