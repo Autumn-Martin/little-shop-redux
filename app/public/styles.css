@@ -181,3 +181,21 @@ section a {
 }
 
 /* Styling for item page */
+
+/*Styling for item index page */
+
+.col.invoice-index {
+  margin-left: 2%;
+}
+.row.invoice-index {
+  margin-right: 2%;
+  outline-style: dotted;
+  outline-color: #c9e4ca;
+}
+.invoice-index-body {
+  vertical-align: center;
+}
+a#invoice-link.badge{
+  padding: 20px;
+  font-size: 16px;
+}

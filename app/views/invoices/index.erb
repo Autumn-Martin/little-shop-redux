@@ -3,23 +3,25 @@
     <a href="/invoices-dashboard" class="dashboard-link">Dashboard</a>
     <h1 class="index-title"style="margin:5%">Invoices</h1>
   </section>
-  <% @invoices.each do |invoice| %>
-    <div id="invoice-<%= invoice.id %>" class="container">
-      <div class="row">
-        <div class="col">
-          <a href="/invoices/<%= invoice.id %>" class="badge" id="invoice-link"> <%= invoice.name %> </a>
-        </div>
-        <div class="col-1" >
-          <a href="/invoices/<%= invoice.id %>/edit" class="btn btn-info">Edit</a>
-        </div>
-        <div class="col-1">
-          <form action="/invoices/<%= invoice.id %>" method="POST">
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>
-          </form>
+  <section class= "invoice-index-body">
+    <% @invoices.each do |invoice| %>
+      <div id="invoice-<%= invoice.id %>" class="container">
+        <div class="row invoice-index">
+          <div class="col invoice-index">
+            <a href="/invoices/<%= invoice.id %>" class="badge" id="invoice-link"> <%= invoice.id %> </a>
+          </div>
+          <div class="col-1 invoice-index" >
+            <a href="/invoices/<%= invoice.id %>/edit" class="btn btn-info">Edit</a>
+          </div>
+          <div class="col-1 invoice-index">
+            <form action="/invoices/<%= invoice.id %>" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br />
-  <% end %>
+      <br />
+    <% end %>
+  </section>
 </section>
