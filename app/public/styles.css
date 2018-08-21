@@ -222,8 +222,12 @@ h3 {
   padding: 5% 10%;
 }
 .edit-body textarea {
-  padding: 5% 20%;
+  padding: 5% 3%;
 }
 .edit-body input {
   padding: 10px 10px;
+}
+form .edit-item {
+  margin-left: 5%;
+  margin-right: 5%;
 }
