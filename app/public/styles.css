@@ -60,6 +60,7 @@ nav li:hover {
 #delete-btn {
   background:#3b6064;
   color: white;
+  margin-right: 1%;
 }
 #delete-btn:hover {
   background: #364958;
@@ -191,6 +192,8 @@ section a {
   /* margin-right: 2%; */
   outline-style: dotted;
   outline-color: #c9e4ca;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .invoice-index-body {
   vertical-align: center;
@@ -200,6 +203,20 @@ section a {
 a#invoice-link.badge{
   padding: 20px;
   font-size: 16px;
+  margin-right: 50%;
+}
+
+.invoice-index-body a.btn.btn-info{
+  margin-right: 2%;
+  margin-left: 25%;
+
+}
+
+.invoice-index-body#delete-btn {
+  background:#3b6064;
+  color: white;
+  height: 100%;
+  margin-right: 0;
 }
 
 /* Item Edit page styling */
