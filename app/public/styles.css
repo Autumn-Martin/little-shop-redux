@@ -207,13 +207,23 @@ a.btn.btn-info{
 
 }
 /* Item Edit page styling */
+h3 {
+  padding: 20px 0px;
+  font-size: 20px;
+}
 .edit-body {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
   margin-top: 2%;
   text-align: left;
 }
 .edit-square {
   background: #DFEBE4;
-  padding: 2% 2%;
+  padding: 5% 10%;
+}
+.edit-body textarea {
+  padding: 5% 20%;
+}
+.edit-body input {
+  padding: 10px 10px;
 }
