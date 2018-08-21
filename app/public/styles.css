@@ -206,3 +206,14 @@ a.btn.btn-info{
   margin-right: 5%;
 
 }
+/* Item Edit page styling */
+.edit-body {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  text-align: left;
+}
+.edit-square {
+  background: #DFEBE4;
+  padding: 2% 2%;
+}

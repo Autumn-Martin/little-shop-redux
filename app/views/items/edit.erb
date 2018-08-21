@@ -1,22 +1,26 @@
 <section class="jumbotron text-center" style="margin-bottom:5%">
   <h1 class="index-title"style="margin:5%">Edit <%= @item.title %>:</h1>
 </section>
-<form class='edit-item' action='/items/<%= @item.id %>' method='POST'>
-  <h3>Merchant</h3>
-  <select>
-    <%@merchants.each do |merchant|%>
-      <option value="<%=merchant.id%>"><%=merchant.name%></option>
-    <%end%>
-  </select>
-  <h3>Title</h3>
-  <input type='hidden' name='_method' value='PUT'>
-  <textarea name='item[title]'><%= @item.title %></textarea>
-  <h3>Description</h3>
-  <textarea name='item[description]'><%= @item.description %></textarea>
-  <h3>Price</h3>
-  <input type='text' name='item[price]' value='<%= @item.unit_price %>'>
-  <h3>Image URL</h3>
-  <input type='text' name='item[image]' value='<%= @item.image %>'>
-  <input type='submit' value='Update Item'>
-</form>
-<form action="/items"><input type="submit" value="Cancel"></form>
+<section class="edit-body">
+  <div class="edit-square">
+    <form class='edit-item' action='/items/<%= @item.id %>' method='POST'>
+      <h3>Merchant</h3>
+      <select>
+        <%@merchants.each do |merchant|%>
+          <option value="<%=merchant.id%>"><%=merchant.name%></option>
+        <%end%>
+      </select>
+      <h3>Title</h3>
+      <input type='hidden' name='_method' value='PUT'>
+      <textarea name='item[title]'><%= @item.title %></textarea>
+      <h3>Description</h3>
+      <textarea name='item[description]'><%= @item.description %></textarea>
+      <h3>Price</h3>
+      <input type='text' name='item[price]' value='<%= @item.unit_price %>'>
+      <h3>Image URL</h3>
+      <input type='text' name='item[image]' value='<%= @item.image %>'>
+      <input type='submit' value='Update Item'>
+    </form>
+    <form action="/items"><input type="submit" value="Cancel"></form>
+  </div>
+</section>
