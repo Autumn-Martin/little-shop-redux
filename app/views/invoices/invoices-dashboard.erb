@@ -3,13 +3,13 @@
 </section>
 
 <section class="dashboard-columns">
-  <div class="col-1">
+  <div class="cols-1">
     <h5>Status Percentages </h5>
     <h5>Pending <%= @percent_pending %> %</h5>
     <h5>Shipped <%= @percent_shipped %> %</h5>
     <h5>Returned <%= @percent_returned %> %</h5>
   </div>
-  <div class="col-2">
+  <div class="cols-2">
     <h5>Unit Prices </h5>
     <h5>Highest Invoice: <a href="/invoices/<%= @highest_price_invoice%>"><%= @highest_price_invoice %></a> </h5>
     <h5>Lowest Invoice: <a href="/invoices/<%= @lowest_price_invoice%>"><%= @lowest_price_invoice %></a> </h5>

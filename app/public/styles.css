@@ -270,7 +270,7 @@ form .edit-item {
     font-size: 18px;
 }
 /* Styling for item dashboard */
-.col-1, .col-2, .col-3{
+.cols-1, .cols-2, .cols-3{
   border: 2px solid #000;
   margin: 10px 20px;
   height: 250px;
