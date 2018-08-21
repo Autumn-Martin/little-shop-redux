@@ -269,3 +269,20 @@ form .edit-item {
     border-radius: 4px;
     font-size: 18px;
 }
+/* Styling for item dashboard */
+.col-1, .col-2, .col-3{
+  border: 2px solid #000;
+  margin: 10px 20px;
+  height: 250px;
+  width: 250px;
+}
+
+.dashboard-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* */
