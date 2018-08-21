@@ -33,7 +33,6 @@ CSV.foreach('./data/invoices.csv', headers: true, header_converters: :symbol) do
   if invoice[:merchant_id] && invoice[:status]
     Invoice.create(
                     id:               invoice[:id],
-                    customer_id:      invoice[:customer_id],
                     merchant_id:      invoice[:merchant_id],
                     status:           invoice[:status],
                     created_at:       invoice[:created_at],
