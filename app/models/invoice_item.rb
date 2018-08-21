@@ -7,12 +7,12 @@ class InvoiceItem < ActiveRecord::Base
   belongs_to :item
   belongs_to :invoice
 
-  def self.price_high
-    order("unit_price DESC").first
+  def self.item_price_high
+    order("unit_price DESC").first.item_id
   end
 
-  def self.price_low
-    order("unit_price ASC").first
+  def self.item_price_low
+    order("unit_price ASC").first.item_id
   end
 
 end

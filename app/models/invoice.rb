@@ -17,4 +17,6 @@ class Invoice < ActiveRecord::Base
     ((grouped_by_status[category] / total_invoice_count.to_f) * 100).round(0)
   end
 
+  
+
 end
