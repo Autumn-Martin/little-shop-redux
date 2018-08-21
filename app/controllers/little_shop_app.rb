@@ -47,11 +47,16 @@ class LittleShopApp < Sinatra::Base
 
   get '/items/new' do
     @merchants = Merchant.all
+    @item = Item.new()
     erb :"items/new"
   end
 
   post '/items' do
-    Item.create(params[:item])
+    params[:item][:image] = Item.get_default_image(params[:item][:image])
+    item = Item.create(params[:item])
+    merchant = Merchant.find(params[:merchant_id])
+    item.merchant = merchant
+    item.save
     redirect '/items'
   end
 
@@ -94,7 +99,6 @@ class LittleShopApp < Sinatra::Base
     @items = Item.all
     @invoice = Invoice.find(params[:id])
     @merchant = Merchant.where(id: @invoice.merchant_id)
-    # require 'pry'; binding.pry
     erb :"invoices/show"
   end
 
