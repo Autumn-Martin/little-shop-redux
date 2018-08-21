@@ -41,6 +41,7 @@ CSV.foreach('./data/invoices.csv', headers: true, header_converters: :symbol) do
   end
 end
 
+
 CSV.foreach('./data/invoice_items.csv', headers: true, header_converters: :symbol) do |invoice_item|
   if invoice_item[:item_id] && invoice_item[:invoice_id]
     InvoiceItem.create(
