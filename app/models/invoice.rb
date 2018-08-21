@@ -8,4 +8,13 @@ class Invoice < ActiveRecord::Base
     #get count all items with pending / items.count
     group(:pending).count / items.count
   end
+
+  def percent_shipped
+    #get count all items with shipped / items.count
+  end
+
+  def percent_returned
+    #get count all items with returned / items.count
+  end
+
 end
