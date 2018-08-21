@@ -7,18 +7,12 @@
     <% @invoices.each do |invoice| %>
       <div id="invoice-<%= invoice.id %>" class="container">
         <div class="row invoice-index">
-          <div class="col-9 invoice-index">
             <a href="/invoices/<%= invoice.id %>" class="badge" id="invoice-link"> <%= invoice.id %> </a>
-          </div>
-          <div class="col-1 invoice-index" >
             <a href="/invoices/<%= invoice.id %>/edit" class="btn btn-info">Edit</a>
-          </div>
-          <div class="col-1 invoice-index">
             <form action="/invoices/<%= invoice.id %>" method="POST">
               <input type="hidden" name="_method" value="DELETE">
               <input type="submit" value="Delete" id="delete-btn" class="btn"/>
             </form>
-          </div>
         </div>
       </div>
       <br />
