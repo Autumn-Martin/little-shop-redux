@@ -220,9 +220,11 @@ h3 {
 .edit-square {
   background: #DFEBE4;
   padding: 5% 10%;
+
 }
 .edit-body textarea {
-  padding: 5% 3%;
+  /* padding: 5% 3%; */
+  padding: 20px 3%;
 }
 .edit-body input {
   padding: 10px 10px;

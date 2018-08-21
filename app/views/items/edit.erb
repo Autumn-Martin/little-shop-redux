@@ -12,9 +12,9 @@
       </select>
       <h3>Title</h3>
       <input type='hidden' name='_method' value='PUT'>
-      <textarea name='item[title]'><%= @item.title %></textarea>
+      <textarea rows='1' cols='65' name='item[title]'><%= @item.title %></textarea>
       <h3>Description</h3>
-      <textarea name='item[description]'><%= @item.description %></textarea>
+      <textarea rows='5' cols='65' name='item[description]'><%= @item.description %></textarea>
       <h3>Price</h3>
       <input type='text' name='item[price]' value='<%= @item.unit_price %>'>
       <h3>Image URL</h3>
