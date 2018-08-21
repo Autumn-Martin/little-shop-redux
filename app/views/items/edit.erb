@@ -16,11 +16,17 @@
       <h3>Description</h3>
       <textarea rows='5' cols='65' name='item[description]'><%= @item.description %></textarea>
       <h3>Price</h3>
-      <input type='text' name='item[price]' value='<%= @item.unit_price %>'>
+      <input type='text' name='item[unit_price]' value='<%= @item.unit_price %>'>
       <h3>Image URL</h3>
       <input type='text' name='item[image]' value='<%= @item.image %>'>
-      <input type='submit' value='Update Item'>
+      <div class='row edit-buttons'>
+        <div class='col'>
+          <input type='submit' value='Update Item'>
+        </div>
+        <div class='col'>
+          <form action="/items"><input type="submit" value="Cancel"></form>
+        </div>
+      </div>
     </form>
-    <form action="/items"><input type="submit" value="Cancel"></form>
   </div>
 </section>
