@@ -4,7 +4,7 @@
     <h2>Edit</h2>
     <h2>Delete</h2>
   </section>
-  <p><a href="">Merchant Name!</a></p>
+  <p><a href="">Merchant Name</a></p>
     <div>
       <ul>
         <li>Item ID</li>
@@ -13,20 +13,21 @@
         <li>Unit Price</li>
       </ul>
     </div>
-    <% @invoice_item.items.each do |item| %>
+    <% @invoice.invoice_items.each do |invoice_item| %>
     <div class="row invoice-item-index">
       <div class="col invoice-item-index">
-        <a href="/items/<%= item.id %>" class="badge" id="item-link"> <%= item.title %> </a>
+        <a href="/items/<%= invoice_item.item.id %>" class="badge" id="item-link"> <%= invoice_item.item.title %> </a>
       </div>
       <div class="col-1 invoice-item-index">
-        <%= #item.title %>
+        <%= invoice_item.item.title %>
       </div>
       <div class="col-1 invoice-item-index">
-        <%= #item.quantity %>
+        <%= invoice_item.quantity %>
       </div>
       <div class="col-1 invoice-item-index">
-        <%= #item.unit_price %>
+        <%= invoice_item.item.unit_price %>
       </div>
     </div>
     <% end %>
+  </div>
 </section>
