@@ -1,23 +1,32 @@
 <section class="index">
   <section class="jumbotron text-center">
     <h1 class="index-title">Invoice: <%=@invoice.id%> - <%=@invoice.status%></h1>
-    <div class="col-1 invoice-index" >
-      <a href="/invoices/<%= invoice.id %>/edit" class="btn btn-info">Edit</a>
-    </div>
-    <div class="col-1 invoice-index">
-      <form action="/invoices/<%= invoice.id %>" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>
-      </form>
-    </div>
+    <h2>Edit</h2>
+    <h2>Delete</h2>
   </section>
   <p><a href="">Merchant Name!</a></p>
-  <section>
-    <ul>
-      <li>Item ID</li>
-      <li>Item Title</li>
-      <li>Quantity</li>
-      <li>Unit Price</li>
-    </ul>
-  </section>
+    <div>
+      <ul>
+        <li>Item ID</li>
+        <li>Item Title</li>
+        <li>Quantity</li>
+        <li>Unit Price</li>
+      </ul>
+    </div>
+    <% @invoice_item.items.each do |item| %>
+    <div class="row invoice-item-index">
+      <div class="col invoice-item-index">
+        <a href="/items/<%= item.id %>" class="badge" id="item-link"> <%= item.title %> </a>
+      </div>
+      <div class="col-1 invoice-item-index">
+        <%= #item.title %>
+      </div>
+      <div class="col-1 invoice-item-index">
+        <%= #item.quantity %>
+      </div>
+      <div class="col-1 invoice-item-index">
+        <%= #item.unit_price %>
+      </div>
+    </div>
+    <% end %>
 </section>
