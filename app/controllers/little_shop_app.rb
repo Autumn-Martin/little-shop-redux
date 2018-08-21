@@ -37,7 +37,7 @@ class LittleShopApp < Sinatra::Base
     @merchants = Merchant.all
     @most_items = Merchant.most_items
     @highest_priced_item = Merchant.highest_priced_item
-    erb :'merchants/merchants-dashboard'
+    erb :'merchants/dashboard'
   end
 
   get '/items' do
@@ -93,6 +93,12 @@ class LittleShopApp < Sinatra::Base
   get '/invoices/:id' do
     @invoice = Invoice.find(params[:id])
     erb :"invoices/show"
+  end
+
+  get '/invoices/:id/edit' do
+    @invoices = Invoice.all
+    @invoice = Invoice.find(params[:id])
+    erb :'invoices/edit'
   end
 
   post '/invoices' do
