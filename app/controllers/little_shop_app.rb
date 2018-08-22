@@ -1,4 +1,10 @@
 class LittleShopApp < Sinatra::Base
+  get '/merchants-dashboard' do
+    @merchants = Merchant.all
+    @most_items = Merchant.most_items
+    @highest_priced_item = Merchant.highest_priced_item
+    erb :'merchants/dashboard'
+  end
   get '/merchants' do
     @merchants = Merchant.all
     erb :"merchants/index"
@@ -33,11 +39,13 @@ class LittleShopApp < Sinatra::Base
     redirect '/merchants'
   end
 
-  get '/merchants-dashboard' do
-    @merchants = Merchant.all
-    @most_items = Merchant.most_items
-    @highest_priced_item = Merchant.highest_priced_item
-    erb :'merchants/dashboard'
+  get '/items-dashboard' do
+    @items = Item.all
+    @average_unit_price = Item.average_unit_price
+    @total_item_count = Item.total_item_count
+    @newest = Item.newest
+    @oldest = Item.oldest
+    erb :'items/dashboard'
   end
 
   get '/items' do
@@ -81,13 +89,15 @@ class LittleShopApp < Sinatra::Base
     redirect '/items'
   end
 
-  get '/items-dashboard' do
-    @items = Item.all
-    @average_unit_price = Item.average_unit_price
-    @total_item_count = Item.total_item_count
-    @newest = Item.newest
-    @oldest = Item.oldest
-    erb :'items/dashboard'
+  get '/invoices-dashboard' do
+    @percent_pending = Invoice.percent("pending")
+    @percent_shipped = Invoice.percent("shipped")
+    @percent_returned = Invoice.percent("returned")
+    @highest_price_invoice = InvoiceItem.invoice_price_high
+    @lowest_price_invoice = InvoiceItem.invoice_price_low
+    @highest_quantity_invoices = InvoiceItem.high_quantity_invoice
+    @lowest_quantity_invoices = InvoiceItem.low_quantity_invoice
+    erb :'invoices/invoices-dashboard'
   end
 
   get '/invoices' do
@@ -121,16 +131,5 @@ class LittleShopApp < Sinatra::Base
   delete '/invoices/:id' do
     Invoice.destroy(params[:id])
     redirect '/invoices'
-  end
-
-  get '/invoices-dashboard' do
-    @percent_pending = Invoice.percent("pending")
-    @percent_shipped = Invoice.percent("shipped")
-    @percent_returned = Invoice.percent("returned")
-    @highest_price_invoice = InvoiceItem.invoice_price_high
-    @lowest_price_invoice = InvoiceItem.invoice_price_low
-    @highest_quantity_invoices = InvoiceItem.high_quantity_invoice
-    @lowest_quantity_invoices = InvoiceItem.low_quantity_invoice
-    erb :'invoices/invoices-dashboard'
   end
 end
