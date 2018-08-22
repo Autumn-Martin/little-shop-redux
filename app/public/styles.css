@@ -235,17 +235,25 @@ h3 {
   font-size: 20px;
 }
 .edit-body {
-  margin-left: 15%;
-  margin-right: 15%;
+  /* margin-left: 15%;
+  margin-right: 15%; */
   margin-top: 2%;
   text-align: left;
 }
 .edit-square {
   background: #DFEBE4;
   padding: 10% 10%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.edit-item {
+
 }
 .edit-body textarea {
-  padding: 20px 3%;
+  padding: 3% 3%;
+  overflow: scroll;
+  resize: none;
+  max-width: 100%;
 }
 .green-line {
   outline-style: solid;
@@ -259,7 +267,7 @@ form .edit-item {
   margin-right: 5%;
 }
 .row.edit-buttons {
-  margin-top: 5%;
+  margin-top: 15%;
 }
 
 .input-form {
