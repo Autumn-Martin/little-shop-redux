@@ -5,7 +5,7 @@ RSpec.describe Item, type: :model do
     it { should validate_presence_of(:unit_price)}
     it { should validate_presence_of(:image)}
     it 'has one merchant' do
-      association = described_class.reflect_on_association(:merchants)
+      association = described_class.reflect_on_association(:merchant)
       expect(association.macro).to eq :belongs_to
     end
   end

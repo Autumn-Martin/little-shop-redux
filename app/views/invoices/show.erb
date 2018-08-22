@@ -1,34 +1,38 @@
-<section class="index">
-  <section class="jumbotron text-center">
-    <h1 class="index-title">Invoice: <%=@invoice.id%> - <%=@invoice.status%></h1>
-    <h2>Edit</h2>
-    <h2>Delete</h2>
+<section>
+  <section class="jumbotron text-center less-pad">
+    <h1 class="show-title" style="margin:5%">Invoice: <%=@invoice.id%> - <%=@invoice.status%></h1>
+    <form action="/invoices/<%= @invoice.id %>" method="POST">
+      <div class="row show-buttons">
+        <div class='col'>
+          <a href="/invoices/<%= @invoice.id %>/edit" class="btn btn-info">Edit</a>
+        </div>
+        <div class='col'>
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Delete" id="delete-btn" class="btn shadow"/>
+        </div>
+      </div>
+    </form>
   </section>
 
-  <p><a href="">Merchant Name</a></p>
-    <div>
-      <ul>
-        <li>Item ID</li>
-        <li>Item Title</li>
-        <li>Quantity</li>
-        <li>Unit Price</li>
-      </ul>
+
+  <section id="invoices-show-body">
+    <h2><a href="/merchants/<%= @invoice.merchant_id %>" class="badge" id="merchant-link"><%= @merchant.first.name %></a></h2>
+      <% @invoice.invoice_items.each do |invoice_item| %>
+      <div class="row invoices-show">
+        <div class="col invoices-show">
+          <a href="/items/<%= invoice_item.item.id %>"> <%= invoice_item.item.id%> </a>
+        </div>
+        <div class="col invoices-show">
+          <%= invoice_item.item.title %>
+        </div>
+        <div class="col invoices-show">
+          <%= invoice_item.quantity %>
+        </div>
+        <div class="col invoices-show">
+          <%= invoice_item.item.unit_price %>
+        </div>
+      </div>
+      <% end %>
     </div>
-    <% @invoice.invoice_items.each do |invoice_item| %>
-    <div class="row invoice-item-index">
-      <div class="col invoice-item-index">
-        <a href="/items/<%= invoice_item.item.id %>" class="badge" id="item-link"> <%= invoice_item.item.title %> </a>
-      </div>
-      <div class="col-1 invoice-item-index">
-        <%= invoice_item.item.title %>
-      </div>
-      <div class="col-1 invoice-item-index">
-        <%= invoice_item.quantity %>
-      </div>
-      <div class="col-1 invoice-item-index">
-        <%= invoice_item.item.unit_price %>
-      </div>
-    </div>
-    <% end %>
-  </div>
+  </section>
 </section>
