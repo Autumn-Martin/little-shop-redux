@@ -1,10 +1,10 @@
 RSpec.describe Merchant, type: :model do
   describe 'Validations' do
 
-    it { should validate_presence_of(:name)}
-    it { should validate_presence_of(:id)}
-    it { should validate_presence_of(:created_at)}
-    it { should validate_presence_of(:updated_at)}
+    # it { should validate_presence_of(:name)}
+    # it { should validate_presence_of(:id)}
+    # it { should validate_presence_of(:created_at)}
+    # it { should validate_presence_of(:updated_at)}
     # it { should has_many(:items)}
     it 'has many items' do
       association = described_class.reflect_on_association(:items)
