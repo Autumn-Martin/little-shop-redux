@@ -17,7 +17,7 @@
       <h3>Description</h3>
       <textarea rows='5' cols='60' class='green-line' name='item[description]'><%= @item.description %></textarea>
       <h3>Price</h3>
-      <input type='text' class='green-line' name='item[unit_price]' value='<%= @item.unit_price %>'>
+      <input type='text' class='green-line' name='item[unit_price]' value='$ <%= '%.2f' % @item.unit_price %>'>
       <h3>Image URL</h3>
       <input type='text' class='green-line' name='item[image]' value='<%= @item.image %>'>
       <div class='row edit-buttons'>
