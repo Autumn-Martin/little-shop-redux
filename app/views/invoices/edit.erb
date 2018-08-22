@@ -1,0 +1,57 @@
+<section class="jumbotron text-center" style="margin-bottom:5%">
+  <h1 class="index-title"style="margin:5%">Invoice: <%= @invoice.id %> - <%= @invoice.status %></h1>
+</section>
+<div class="merchant-container">
+  <div class="input-form">
+    <form action="/invoices/<%= @invoice.id %>/edit" method="POST">
+      <input type="hidden" name="_method" value="PUT">
+
+        <label>Merchant</label>
+        <select id="disabledSelect">
+            <option><%= @invoice.merchant.name%></option>
+        </select>
+      <br />
+      <br />
+      <label>Status</label>
+      <select>
+          <option value="<%=@invoice.status%>"><%="shipped"%></option>
+          <option value="<%=@invoice.status%>"><%="returned"%></option>
+          <option value="<%=@invoice.status%>"><%="pending"%></option>
+      </select>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <input class='btn btn-info' type="submit" value="Update Invoice">
+    </form>
+      <br />
+    <form action="/invoices">
+      <button type='submit' id="delete-btn" class="btn">Cancel</button>
+    </form>
+  </div>
+  <br />
+  <br />
+  <br />
+
+  <section id="invoices-show-body">
+      <% @invoice.invoice_items.each do |invoice_item| %>
+      <div class="row invoices-show">
+        <div class="col invoices-show">
+          <a href="/items/<%= invoice_item.item.id %>"> <%= invoice_item.item.id%> </a>
+        </div>
+        <div class="col invoices-show">
+          <%= invoice_item.item.title %>
+        </div>
+        <div class="col invoices-show">
+          <%= invoice_item.quantity %>
+        </div>
+        <div class="col invoices-show">
+          <%= invoice_item.item.unit_price %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </section>
+
+</div>
