@@ -25,11 +25,33 @@
       <br>
       <input class='btn btn-info' type="submit" value="Update Invoice">
     </form>
+      <br />
     <form action="/invoices">
       <button type='submit' id="delete-btn" class="btn">Cancel</button>
     </form>
   </div>
-  
+  <br />
+  <br />
+  <br />
 
+  <section id="invoices-show-body">
+      <% @invoice.invoice_items.each do |invoice_item| %>
+      <div class="row invoices-show">
+        <div class="col invoices-show">
+          <a href="/items/<%= invoice_item.item.id %>"> <%= invoice_item.item.id%> </a>
+        </div>
+        <div class="col invoices-show">
+          <%= invoice_item.item.title %>
+        </div>
+        <div class="col invoices-show">
+          <%= invoice_item.quantity %>
+        </div>
+        <div class="col invoices-show">
+          <%= invoice_item.item.unit_price %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </section>
 
 </div>
