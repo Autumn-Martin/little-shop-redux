@@ -7,7 +7,7 @@ RSpec.describe 'Single Item Page' do
   end
   context 'as a visitor' do
     before(:each) do
-      visit '/items/1'
+      visit "/items/#{@item_1.id}"
     end
     it 'shows an individual item name' do
       expect(page).to have_content(@item_1.title)
