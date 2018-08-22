@@ -19,7 +19,7 @@ RSpec.describe 'Item index page' do
     it 'shows create a new item button' do
       expect(page).to have_link("Create A New Item")
     end
-    it "shows pictures of item" do
+    it "shows picture of item" do
       expect(page).to have_css("img[src*='https://www.kesslerandsons.com/wp-content/uploads/2015/04/yanagisawa-awo37-alto-logo.jpg']")
     end
     it "shows price of item" do
