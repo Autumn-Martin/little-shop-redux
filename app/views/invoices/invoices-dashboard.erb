@@ -1,18 +1,20 @@
-<h1>Invoices Dashboard</h1>
+<section class="jumbotron text-center" style="margin-bottom:5%">
+  <h1 class="index-title"style="margin:5%">Invoices Dashboard</h1>
+</section>
 
-<section>
-  <div class="box-1">
+<section class="merchant-cubes" class="flexy">
+  <div class="merchant-container">
     <h5>Status Percentages </h5>
     <h5>Pending <%= @percent_pending %> %</h5>
     <h5>Shipped <%= @percent_shipped %> %</h5>
     <h5>Returned <%= @percent_returned %> %</h5>
   </div>
-  <div class="box-2">
+  <div class="merchant-container">
     <h5>Unit Prices </h5>
     <h5>Highest Invoice: <a href="/invoices/<%= @highest_price_invoice%>"><%= @highest_price_invoice %></a> </h5>
     <h5>Lowest Invoice: <a href="/invoices/<%= @lowest_price_invoice%>"><%= @lowest_price_invoice %></a> </h5>
   </div>
-  <div class="box-3">
+  <div class="merchant-container">
       <h5>Quantity </h5>
       <h5>Highest Invoice: <a href="/invoices/<%= @highest_quantity_invoices%>"><%= @highest_quantity_invoices %> </a></h5>
       <h5>Lowest Invoice: <a href="/invoices/<%= @lowest_quantity_invoices%>"><%= @lowest_quantity_invoices  %> </a></h5>
