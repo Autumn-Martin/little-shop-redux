@@ -22,8 +22,7 @@ RSpec.describe 'Item index page' do
     end
     it "shows pictures of item" do
       visit '/items'
-      # expect(page).to have_content(@item_1.image)
-      # expect(page).to have_content(@item_2.image)
+      expect(page).to have_css("img[src*='https://www.kesslerandsons.com/wp-content/uploads/2015/04/yanagisawa-awo37-alto-logo.jpg']")
     end
     it "shows price of item" do
       visit '/items'
