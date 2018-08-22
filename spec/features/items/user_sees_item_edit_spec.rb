@@ -8,9 +8,8 @@ RSpec.describe 'User' do
 
     expect(page).to have_content(@item_1.title)
     expect(page).to have_content(@item_1.description)
-    # expect(page).to have_xpath(@item_1.image)
     expect(page).to have_content(@item_1.merchant.name)
-    # expect(page).to have_content(@item_1.unit_price)
+    expect(page).to have_content(@item_1.unit_price)
   end
   it "can click on cancel and go to item index" do
     visit "/items/#{@item_1.id}/edit"
