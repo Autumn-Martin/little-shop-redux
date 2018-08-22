@@ -89,6 +89,7 @@ nav li:hover {
   color: #364958;
   padding: 14px 24px;
   font-size: 20px;
+  height: 54px;
 }
 #merchant-link:hover {
   background: #87bba2;
