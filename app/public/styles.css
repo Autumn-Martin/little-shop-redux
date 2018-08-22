@@ -158,6 +158,8 @@ section a {
   background: #DFEBE4;
   padding: 2% 2%;
   border-radius: 5%;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .merchant-container li {
   margin-bottom: 5%;
@@ -269,3 +271,4 @@ form .edit-item {
     border-radius: 4px;
     font-size: 18px;
 }
+/* Item dashboard styling*/

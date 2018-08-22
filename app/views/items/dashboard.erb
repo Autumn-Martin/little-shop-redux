@@ -1,17 +1,25 @@
-<h1>Items Dashboard</h1>
-
-<section>
-  <h5>Total Item Count: <%= @total_item_count %></h5>
-  <h5>Avg Price Per Item: $ <%= @average_unit_price.round(2) %></h5>
-  <h5>Item By Age:</h5>
-  <h5>Newest</h5>
-    <ul>
-      <li><p>Item:</p></li>
-      <li><a href="/items/<%= @newest.id%>"><%= @newest.title %></a></li>
-    </ul>
-  <h5>Oldest</h5>
-    <ul>
-      <li><p>Item:</p></li>
-      <li><a href="/items/<%= @oldest.id%>"><%= @oldest.title %></a></li>
-    </ul>
+<section class="jumbotron text-center" style="margin-bottom:5%">
+  <h1 class="index-title"style="margin:5%">Items Dashboard</h1>
+</section>
+<section class="merchant-cubes">
+  <div class="merchant-container">
+    <h5>Total Item Count: <%= @total_item_count %></h5>
+  </div>
+  <div class="merchant-container">
+    <h5>Avg Price Per Item:</h5>
+    <h5>$ <%= @average_unit_price.round(2) %></h5>
+  </div>
+  <div class="merchant-container">
+    <h5>Item By Age:</h5>
+    <h5>Newest</h5>
+      <ul>
+        <li><p>Item:</p></li>
+        <li><a href="/items/<%= @newest.id%>"><%= @newest.title %></a></li>
+      </ul>
+    <h5>Oldest</h5>
+      <ul>
+        <li><p>Item:</p></li>
+        <li><a href="/items/<%= @oldest.id%>"><%= @oldest.title %></a></li>
+      </ul>
+  </div>
 </section>
