@@ -31,4 +31,8 @@ class Item < ActiveRecord::Base
       image
     end
   end
+
+  def unit_price_to_currency
+    ('$%.2f' % unit_price).to_s
+  end
 end
