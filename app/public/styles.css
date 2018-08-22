@@ -58,7 +58,7 @@ nav li:hover {
 }
 
 #delete-btn {
-  background:#3b6064;
+  background:#364958;
   color: white;
   margin-right: 1%;
 }
@@ -268,4 +268,51 @@ form .edit-item {
     border: 2px solid #364958;
     border-radius: 4px;
     font-size: 18px;
+}
+/* Invoice Show Page Styling */
+
+
+.show-title {
+  font-size: 36px;
+  color:#c9e4ca;
+}
+.row.show-buttons {
+  margin-top: 5%;
+}
+.row.show-buttons#delete-btn {
+  background:#3b6064;
+  color: white;
+  height: 100%;
+  margin-right: 0;
+}
+
+h2 {
+  padding: 20px 0px;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+#invoices-show-body {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.row.invoices-show {
+  padding: 1% 2%;
+  outline-style: dotted;
+  outline-color: #c9e4ca;
+  margin-bottom: 5%;
+}
+.jumbotron.text-center.less-pad {
+  padding: 5% 5%;
+}
+
+/* editing item/edit buttons */
+.btn.edit {
+  background:#364958;
+  color: white;
+  margin-right: 1%;
+}
+
+.btn.edit:hover {
+  background: #364958;
 }

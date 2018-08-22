@@ -23,5 +23,12 @@ class Item < ActiveRecord::Base
   def self.oldest
     order("created_at").last
   end
-  
+
+  def self.get_default_image(image)
+    if image.empty?
+      '../public/item.png'
+    else
+      image
+    end
+  end
 end
