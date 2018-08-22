@@ -13,7 +13,7 @@ RSpec.describe 'User views item dashboard page' do
       expect(page).to have_content("Total Item Count: #{Item.count}") #return to me
     end
     it 'shows average price per item' do
-      expect(page).to have_content("Avg Price Per Item: #{Item.}")
+      expect(page).to have_content("Avg Price Per Item: #{Item.average_unit_price}")
     end
     # it 'shows item by age' do
     #   expect(page).to have_content("Newest Item: ")
