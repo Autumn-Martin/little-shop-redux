@@ -61,6 +61,7 @@ nav li:hover {
   background:#364958;
   color: white;
   margin-right: 1%;
+  height: 100%;
 }
 #delete-btn:hover {
   background: #364958;
