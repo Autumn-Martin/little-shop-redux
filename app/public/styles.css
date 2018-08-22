@@ -61,6 +61,7 @@ nav li:hover {
   background:#364958;
   color: white;
   margin-right: 1%;
+  height: 100%;
 }
 #delete-btn:hover {
   background: #364958;
@@ -89,6 +90,7 @@ nav li:hover {
   color: #364958;
   padding: 14px 24px;
   font-size: 20px;
+  height: 54px;
 }
 #merchant-link:hover {
   background: #87bba2;
@@ -235,17 +237,26 @@ h3 {
   font-size: 20px;
 }
 .edit-body {
-  margin-left: 15%;
-  margin-right: 15%;
+  /* margin-left: 15%;
+  margin-right: 15%; */
   margin-top: 2%;
   text-align: left;
 }
 .edit-square {
   background: #DFEBE4;
-  padding: 5% 10%;
+  padding: 10% 10%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 15%;
+}
+.edit-item {
+
 }
 .edit-body textarea {
-  padding: 20px 3%;
+  padding: 3% 3%;
+  overflow: scroll;
+  resize: none;
+  max-width: 100%;
 }
 .green-line {
   outline-style: solid;
@@ -259,7 +270,7 @@ form .edit-item {
   margin-right: 5%;
 }
 .row.edit-buttons {
-  margin-top: 5%;
+  margin-top: 15%;
 }
 
 .input-form {
@@ -289,6 +300,12 @@ form .edit-item {
   flex-wrap: wrap;
 }
 /* Invoice Show Page Styling */
+
+/* Invoice New Page Styling */
+.new-item-body {
+  margin-left: 15%;
+  margin-right: 15%;
+}
 
 
 .show-title {
