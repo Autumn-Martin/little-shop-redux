@@ -1,6 +1,6 @@
 RSpec.describe 'Edit Merchant attributes' do
   context 'visting /merchants/id/edit' do
-    it 'can edit merchant name' do
+    it 'can edit merchant details' do
     merchant = Merchant.create(name: 'More Saxophones')
     new_name = 'Trumpets place'
     visit "/merchants"
