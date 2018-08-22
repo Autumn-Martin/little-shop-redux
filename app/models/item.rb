@@ -9,7 +9,7 @@ class Item < ActiveRecord::Base
   validates_presence_of :image
 
   def self.average_unit_price
-    average(:unit_price)
+    average(:unit_price).round(2)
   end
 
   def self.total_item_count
@@ -30,5 +30,9 @@ class Item < ActiveRecord::Base
     else
       image
     end
+  end
+
+  def unit_price_to_currency
+    ('$%.2f' % unit_price).to_s
   end
 end

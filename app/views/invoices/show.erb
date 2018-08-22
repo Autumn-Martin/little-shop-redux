@@ -29,7 +29,7 @@
           <%= invoice_item.quantity %>
         </div>
         <div class="col invoices-show">
-          <%= invoice_item.item.unit_price %>
+          <p><%= invoice_item.item.unit_price_to_currency %></p>
         </div>
       </div>
       <% end %>
