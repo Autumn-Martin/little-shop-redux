@@ -242,7 +242,7 @@ h3 {
 }
 .edit-square {
   background: #DFEBE4;
-  padding: 5% 10%;
+  padding: 2% 2%;
 }
 .edit-body textarea {
   padding: 20px 3%;
@@ -289,6 +289,12 @@ form .edit-item {
   flex-wrap: wrap;
 }
 /* Invoice Show Page Styling */
+
+/* Invoice New Page Styling */
+.new-item-body {
+  margin-left: 15%;
+  margin-right: 15%;
+}
 
 
 .show-title {
