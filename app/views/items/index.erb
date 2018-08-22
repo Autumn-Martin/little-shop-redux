@@ -10,7 +10,7 @@
     <% @items.each do |item| %>
     <div class="item-container">
       <div class="col">
-        <img src="item.png" alt="image placeholder"/>
+        <img src="<%=item.image%>" alt="image placeholder"/>
         <p><a href="/items/<%=item.id%>"><%=item.title.truncate(23)%></a></p>
         <p>$ <%='%.2f' % item.unit_price%></p>
       </div>
