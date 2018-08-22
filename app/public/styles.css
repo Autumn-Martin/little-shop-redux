@@ -179,8 +179,16 @@ section a {
 
 /* Styling for item page */
 .image-size {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: auto;
+  padding: 2% 2%;
+}
+.item-show {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.item-show.row {
+  vertical-align: top;
 }
 
 /* Styling for item page */
