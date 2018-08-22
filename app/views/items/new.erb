@@ -10,9 +10,9 @@
           <option value="<%=merchant.id%>"><%=merchant.name%></option>
         <%end%>`
       </select>
-    <p>Title</br>
-      <input type='hidden' name='_method' value='POST'>
-        <textarea rows='1' cols='60' class='green-line' name='item[title]'><%= @item.title %></textarea>
+      <h3>Title</h3>
+        <input type='hidden' name='_method' value='POST'>
+          <textarea rows='1' cols='60' class='green-line' name='item[title]'><%= @item.title %></textarea>
       <h3>Description</h3>
         <textarea rows='5' cols='60' class='green-line' name='item[description]'><%= @item.description %></textarea>
       <h3>Price</h3>
