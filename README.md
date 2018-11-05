@@ -4,10 +4,17 @@ layout: page
 [![Waffle.io - Issues in progress](https://badge.waffle.io/Autumn-Martin/little-shop-redux.png?label=in%20progress&title=In%20Progress)](http://waffle.io/Autumn-Martin/little-shop-redux)
 
 # Little Shop Redux
+Date: August 15, 2018 - August 22, 2018
+Contributors: Autumn Martin, Tim Fielder, & Andrew Tobin
 
 ## Abstract
 
-In this project you'll use Ruby, Sinatra, and ActiveRecord to build a site that shows items by categories and analyzes those items.
+This was a 3-person, week-long group project. We used Ruby, Sinatra, ActiveRecord, and a PostgreSQL database to build a shop complete with merchants, items, and invoices. This site also includes analysis of each of these on its dashboard pages.
+
+Tech Stack: Ruby, Sinatra, ActiveRecord, PostgreSQL, Rspec, Capybara, HTML, CSS, Bootstrap, & Waffle.
+
+Example Graphics:
+![](./public/merchants_index.png)
 
 ## Learning Goals
 
